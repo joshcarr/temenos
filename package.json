@@ -1,0 +1,33 @@
+{
+  "name": "temenos",
+  "version": "1.0.0",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "chart": "tsx scripts/chart.ts",
+    "measure": "tsx scripts/measure.ts",
+    "typecheck": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshcarr/temenos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joshcarr/temenos/issues"
+  },
+  "homepage": "https://github.com/joshcarr/temenos#readme",
+  "dependencies": {
+    "swisseph-wasm": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "astronomy-engine": "^2.1.19",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.2"
+  },
+  "type": "module",
+  "private": true
+}
