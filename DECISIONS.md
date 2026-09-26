@@ -54,3 +54,39 @@ Rejected:
 All inside the 1′ bar. The planet gaps are astronomy-engine's own error: it truncates VSOP87, while Swiss Ephemeris follows JPL DE431 to milliarcseconds.
 
 **Result against astro.com (your natal chart, 26 Sept 2026).** All eleven figures, Chiron included, match to the arcsecond: 0″ gap on every one. The Ascendant, MC and cusps 2, 3, 11 and 12 match within 20″, and astro.com only prints cusps to the whole arcminute, so that's rounding on their side. The local-time conversion produced the same Universal Time astro.com shows. M0 is done.
+
+---
+
+## M1-1. Front end: Vite + TypeScript + Svelte 5
+
+Approved 26 Sept 2026. The full rationale is in `docs/m1-proposal.md`. In short, Svelte's built-in `draw` transition walks an SVG line along its own length, which is the draw ritual, and the runtime compiles down to a few kilobytes. Preact would have meant hand-rolling the animation; plain web components meant more code for six screens.
+
+## M1-2. Name: Temenos
+
+Kept. It names what the app is for: an enclosure where the inner work happens.
+
+## M1-3. Two places: birthplace for the chart, home for the clock
+
+**Problem.** You were born in Princeton and live in Portland. The natal chart must be cast for Princeton, but Dawn, Dusk, "today" and "Yesterday's Dusk" all run on Portland time.
+
+**Effect on you.** At 10pm in Portland the app still shows Dusk for the right date, not tomorrow's Dawn on Eastern time. The Moon phase and sign in the header are for your evening, not New Jersey's.
+
+**Why.** Onboarding asks for birthplace once and home once, both picked from the same bundled city list. The home zone is used for every clock decision; the birthplace only for the natal chart. Rejected: using the phone's current time zone. It would shift Plates while you travel, which is arguably right, so the phone's zone can override home later if you want that.
+
+Dawn is before 2pm and Dusk after 5pm, as the brief says. Between 2 and 5pm the app offers whichever you haven't drawn today, and Dusk if you've drawn neither.
+
+## M1-4. Birth place from a bundled city list
+
+**Problem.** Coordinates and time zones are easy to get wrong and hard to notice when wrong.
+
+**Effect on you.** You type "Princeton" or "Portland" and pick from a short list. It works offline.
+
+**Why.** A list of about 25,000 cities with population over 15,000 (GeoNames, CC BY 4.0) carries coordinates and IANA zone names, is around 1 MB, and is only loaded during onboarding. Rejected: an online geocoder (breaks offline, sends your birthplace to a third party) and typing coordinates (you asked not to).
+
+## M1-5. The page mark sits directly under the image
+
+**Problem.** The page mark is the first thing you copy onto paper, but in the mockup it came after the reading, the prompts and the myth.
+
+**Effect on you.** Draw the Plate, copy the mark while the image is on screen, then read down.
+
+**Why.** It belongs next to the image it comes from. Your call, from the mockup review.
