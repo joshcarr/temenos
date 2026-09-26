@@ -6,7 +6,7 @@ The brief is in `docs/temenos-build-brief.md`, the research behind it in `docs/r
 
 ## Status
 
-M0 (chart math) is done and waiting for the astro.com comparison with real birth data.
+M0 (chart math) is done: the natal chart matches astro.com to the arcsecond for all eleven figures. Next is M1, pending review of `docs/m1-proposal.md`.
 
 ## Development
 

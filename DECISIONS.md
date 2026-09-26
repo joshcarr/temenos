@@ -51,4 +51,6 @@ Rejected:
 | Sun–Pluto, 400 charts 1900–2050 | astronomy-engine (MIT, separate theory) | Moon 28″, Venus 20″, rest ≤ 18″ |
 | Asc, MC, all 12 Placidus cusps, 400 charts, latitudes −60° to 64° | Hand-written Placidus from first principles | 0.6″ |
 
-All inside the 1′ bar. The planet gaps are astronomy-engine's own error: it truncates VSOP87, while Swiss Ephemeris follows JPL DE431 to milliarcseconds. Chiron has no independent source offline, so your astro.com paste is its test.
+All inside the 1′ bar. The planet gaps are astronomy-engine's own error: it truncates VSOP87, while Swiss Ephemeris follows JPL DE431 to milliarcseconds.
+
+**Result against astro.com (your natal chart, 26 Sept 2026).** All eleven figures, Chiron included, match to the arcsecond: 0″ gap on every one. The Ascendant, MC and cusps 2, 3, 11 and 12 match within 20″, and astro.com only prints cusps to the whole arcminute, so that's rounding on their side. The local-time conversion produced the same Universal Time astro.com shows. M0 is done.
