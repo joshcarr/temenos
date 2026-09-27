@@ -47,3 +47,34 @@ export function localToUtc(local: LocalDateTime, zone: string, offsetMinutes?: n
   for (let i = 0; i < 3; i++) guess = naive - zoneOffsetMinutes(zone, guess) * 60000;
   return new Date(guess);
 }
+
+/** Wall-clock parts of an instant in a zone. */
+export function localParts(utc: Date, zone: string): LocalDateTime & { weekday: number } {
+  const fmt = new Intl.DateTimeFormat('en-US', {
+    timeZone: zone, hourCycle: 'h23', year: 'numeric', month: 'numeric', day: 'numeric',
+    hour: 'numeric', minute: 'numeric', second: 'numeric', weekday: 'short',
+  });
+  const p: Record<string, string> = {};
+  for (const part of fmt.formatToParts(utc)) p[part.type] = part.value;
+  const weekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday);
+  return { year: +p.year, month: +p.month, day: +p.day, hour: +p.hour, minute: +p.minute, second: +p.second, weekday };
+}
+
+/** "2026-09-26" for the local calendar date of an instant in a zone. */
+export function localDateKey(utc: Date, zone: string): string {
+  const p = localParts(utc, zone);
+  return `${p.year}-${String(p.month).padStart(2, '0')}-${String(p.day).padStart(2, '0')}`;
+}
+
+/** The date key one calendar day before `key`. */
+export function previousDateKey(key: string): string {
+  const [y, m, d] = key.split('-').map(Number);
+  const t = new Date(Date.UTC(y, m - 1, d - 1));
+  return t.toISOString().slice(0, 10);
+}
+
+/** Whole days from date key a to date key b. */
+export function daysBetween(a: string, b: string): number {
+  const ms = (k: string) => Date.UTC(+k.slice(0, 4), +k.slice(5, 7) - 1, +k.slice(8, 10));
+  return Math.round((ms(b) - ms(a)) / 86400000);
+}
