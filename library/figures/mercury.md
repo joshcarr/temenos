@@ -5,6 +5,7 @@ glyph: ☿
 epithets: [the Messenger, the Crossroads Keeper, the Quick One]
 colour: "#5f8a6e"   # slate green
 voices:
+  nun-at-the-sea: 1
   tavern-mystic: 3
   mythographer: 2
   engraver: 2
@@ -45,6 +46,9 @@ The Messenger has wings at his heels and a snake twined twice about his staff, a
 
 ### tavern-mystic · trickster
 Mercury came in quick as a cat and sold me three opinions before I had my coat off. All three were brilliant. All three were about other people. Your mind is a gorgeous little thief and I adore it, but it has been stealing your attention from your own heart and selling it back to you at a mark-up. Let it talk, let it dazzle. Then ask it, sweetly, what it's running from. Write down whatever it says next, especially if it's rude.
+
+### nun-at-the-sea · trickster
+The mind is a wonderful storyteller, and it never runs out of material. Somebody doesn't answer a message, and within a minute there's a whole novel: what they meant, what it says about you, what you should have done years ago. Mercury loves this. It's quite funny, if you can catch it. So here's the practice: notice the story starting, call it thinking, and come back to the breath. Then write down the story you told yourself most often today. Read it back. Does it need to be true?
 
 ## Figure prompts
 

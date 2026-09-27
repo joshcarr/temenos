@@ -5,6 +5,7 @@ glyph: ☉
 epithets: [the King in the Sun, the Heart-Fire, the One Who Shines]
 colour: "#e3a92b"   # cadmium yellow
 voices:
+  nun-at-the-sea: 1
   engraver: 3
   mythographer: 2
   howler: 2
@@ -45,6 +46,9 @@ The Egyptians said the sun dies every evening. Ra boards his night boat and sail
 
 ### howler · trickster
 Hail the Sun, show-off, gold-toothed, blazing on the bus stop and the car park and the dog asleep on the porch! Hail every ordinary thing lit up like a saint for thirty seconds at five o'clock! The Sun never asks if it deserves to shine, it just does it all day with its shirt off. Take a page and write down every time you shone a little, in the small ways: the good joke, the fixed hinge, the kind word. Brag on paper. Nobody's reading.
+
+### nun-at-the-sea · synchronicity
+There's a teaching that underneath all our confusion is something that was never damaged: a basic warmth and brightness, like the sun behind cloud. We spend a lot of energy trying to become worthy of it, as if it had to be earned. It doesn't. The clouds are real, and so is the sun. You don't have to manufacture your goodness today; you only have to stop hiding from it. Write down one moment when you glimpsed it lately, in yourself or someone else, and didn't look away.
 
 ## Figure prompts
 

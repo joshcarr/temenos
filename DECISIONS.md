@@ -114,3 +114,11 @@ Dawn is before 2pm and Dusk after 5pm, as the brief says. Between 2 and 5pm the 
 **Effect on you.** One-time setup in the Cloudflare dashboard. After that every push deploys, and the installed app picks up the new version the next time you open it.
 
 **Why.** It's what the brief names, it's free at this size, and M2's `/api/plate` function will live in the same project. The build fetches nothing at runtime: the ephemeris, fonts and library are all bundled and precached (about 3 MB, once).
+
+## M1-9. A tenth voice: the Nun at the Edge of the Sea
+
+**Problem.** The council leaned masculine (two of nine voices drew on women, neither a teacher of practice), and nobody taught staying with discomfort in the body, without a story. The Grief Walker works with endings, not the moment-to-moment urge to escape.
+
+**Effect on you.** About one Plate in seven now arrives in her voice, most often on Saturn, Chiron, the Moon, Pluto and Neptune days. Her readings end in a small practice: pause before the reaction, feel the heat without the story, breathe in the hurt and out some ease. She can be pinned in Settings, since every figure has a reading in her voice.
+
+**Why.** Voices are content, so this cost no code: one persona sheet, eleven readings and eleven affinity weights. She is written in the spirit of Pema Chödrön and the Tibetan tradition she teaches in. Like the others, she is not Chödrön, never claims to be, and never quotes her books, which are in copyright. Rejected: a voice only for M2 (she'd never appear offline) and readings for a few figures only (she couldn't be pinned).

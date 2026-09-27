@@ -5,6 +5,7 @@ glyph: ☽
 epithets: [the Mother of Tides, the Night Gardener, the Keeper of the Well]
 colour: "#a9bccf"   # pale silver-blue
 voices:
+  nun-at-the-sea: 2
   pond-walker: 3
   fairy-tale-reader: 2
   howler: 2
@@ -46,6 +47,9 @@ In the tales, the youngest is always sent to the well, and something speaks up o
 
 ### howler · trickster
 Holy the Moon, holy the dirty dishes she shines on, holy the laundry left in the washer overnight smelling of swamp, holy the leftover soup, holy the call to your mother you didn't make and holy the one you did! Holy the cat who wants in and out and in! The Moon is the goddess of all of it, the wet, the warm, the unfinished, the milk and the spilled milk. Make a list, a long ragged one, of everything that fed you. Leave nothing out for being small.
+
+### nun-at-the-sea · imaginal
+Feelings come like weather over the water: a squall, a flat grey calm, a sudden break of light. We're taught to chase them or wall them off. There's another way, which is to sit with them the way you'd sit with a frightened child in the night, not talking much, just staying. The Moon is that child and that mother both. Breathe in whatever mood is here, all of it. Breathe out a little room around it. Then write down the weather, without trying to change it.
 
 ## Figure prompts
 

@@ -5,6 +5,7 @@ glyph: ⚷
 epithets: [the Wounded Healer, the Centaur Teacher, the Bridge]
 colour: "#c08a3e"   # ochre
 voices:
+  nun-at-the-sea: 3
   old-man-at-the-lake: 3
   grief-walker: 2
   mythographer: 2
@@ -44,6 +45,9 @@ There's a kind of hurt that doesn't finish. We're told it should, that there are
 
 ### mythographer · trickster
 In the Grail stories, the Fisher King sits with a wound that won't heal and the whole kingdom goes to dust around him. Knights ride through, admire the castle, eat the dinner and leave. All it would take is one question: what ails you? Parsifal fails to ask it the first time because he's been taught that good knights don't pry. Think of that: the cure held up by good manners. Whose wound have you been too polite to ask about, your own included?
+
+### nun-at-the-sea · synchronicity
+There's an old practice where you breathe in pain, as if drawing in dark smoke, and breathe out whatever relief you can find, as if sending cool light. It sounds backwards; we're trained to take in the good and push away the bad. But when you start with your own hurt, you find it isn't only yours. A great many people are sitting with this same ache right now. Chiron knew. Breathe in your old wound, for yourself and for everyone who shares it. Breathe out ease. Then write down who else carries it.
 
 ## Figure prompts
 

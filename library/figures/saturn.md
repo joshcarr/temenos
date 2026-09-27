@@ -5,6 +5,7 @@ glyph: ♄
 epithets: [the Old King, the Stonemason, the Keeper of Hours]
 colour: "#7a6a58"   # lead, grey-brown
 voices:              # affinity weights when the sky chooses the voice
+  nun-at-the-sea: 3
   mountain-hand: 3
   old-man-at-the-lake: 2
   grief-walker: 2
@@ -47,6 +48,9 @@ I have carved stone for many years, and it has taught me one thing: the stone de
 
 ### tavern-mystic · trickster
 The Old King came into the tavern with his ledger, frowning at everyone's tab. I poured him a cup. He said he doesn't drink. I said, then hold it, your hands look cold. Friend, your inner accountant has kept books on you for years, and every page says "not enough." Buy him a drink. Ask to see the ledger. He may have been counting the wrong thing all along. Write down one entry he forgot to make.
+
+### nun-at-the-sea · synchronicity
+There's a moment, just before the old reaction, when you can feel the itch start. The jaw tightens. The story begins: this always happens, I should have known. Saturn is the teacher who keeps walking us back to that exact spot. Not to punish us; so we can practise staying. What if you didn't fix the discomfort, or explain it, or leave? Let it be as heavy as it is, and breathe. Write down where you felt the tightening today, and what happened when you stayed one breath longer.
 
 ## Figure prompts
 

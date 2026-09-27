@@ -5,6 +5,7 @@ glyph: ♂
 epithets: [the Red Rider, the Smith of the Will, the Spear-Carrier]
 colour: "#d2472f"   # vermilion
 voices:
+  nun-at-the-sea: 2
   mountain-hand: 3
   howler: 2
   fairy-tale-reader: 2
@@ -44,6 +45,9 @@ Mars the red-faced, Mars the elbows-out, Mars honking in traffic, Mars who stubb
 
 ### fairy-tale-reader · imaginal
 In the tales, the third son is always told to sit by the fire while his brothers ride out. He's slow, he's a fool, he gets the worst horse. Then he picks up the rusty sword nobody wanted, and it fits his hand. Anger works like that. We keep it in the ashes until it's needed, and then it's either rusted through or ready. Which is yours? Where have you been sitting by the fire? And what did you dream?
+
+### nun-at-the-sea · synchronicity
+Anger has a lot of energy in it, and the energy isn't the problem. The trouble starts with the story we pour it into, the one that says I'm right and they must pay. Try this: next time the heat comes up, drop the story and feel the heat. Where is it? The chest, the hands, the jaw? It's sharp and alive, and it passes if you let it be only heat. Mars is that fire before it has a target. Write about the last time you felt it, and what you did with it.
 
 ## Figure prompts
 

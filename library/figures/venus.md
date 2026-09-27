@@ -5,6 +5,7 @@ glyph: ♀
 epithets: [the Rose-Keeper, the Morning Star, the Lady of the Threshold]
 colour: "#c4506a"   # rose madder
 voices:
+  nun-at-the-sea: 2
   pond-walker: 3
   tavern-mystic: 3
   engraver: 2
@@ -44,6 +45,9 @@ Venus walked into the tavern and every head turned, even the ones pretending to 
 
 ### engraver · imaginal
 She stands at the gate of the morning with a rose in one hand and a knife in the other, and both are for you. The rose is what you love. The knife is what loving asks you to cut away. Inanna gave up her crown, her beads, her robe, one at each gate, and came up from the dark as queen of heaven and earth. What is given for love is not lost; it is spent. What has love asked you to leave at the gate?
+
+### nun-at-the-sea · imaginal
+Loving-kindness starts close to home, which is inconvenient, because home is where we know all the bad habits. Venus asks whether you can be friends with yourself: not the improved version, this one, who is tired and a bit vain and wants to be liked. Imagine sitting across a small table from that person with two cups of tea. You don't have to fix anything. Only stay, and be kind, the way you would with a friend having a hard week. What would you say to them? Write it down.
 
 ## Figure prompts
 

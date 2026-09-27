@@ -5,6 +5,7 @@ glyph: ♅
 epithets: [the Lightning-Bringer, the Unbinder, the Fire-Thief]
 colour: "#2aa89c"   # electric teal
 voices:
+  nun-at-the-sea: 1
   engraver: 3
   howler: 3
   mythographer: 1
@@ -44,6 +45,9 @@ Uranus the zigzag, Uranus the bolt out of a clear blue Tuesday, the phone call, 
 
 ### mythographer · trickster
 The Monkey King ate the peaches of immortality, drank the emperor's wine, rubbed his own name out of the ledger of death, and turned the palace of heaven upside down for fun. It took the Buddha himself to stop him, and even then the monkey was sure he'd reached the edge of the world when he was only standing in the Buddha's palm. The awakener in us is brilliant and a little ridiculous. Where are you rebelling for real, and where are you just knocking over the peaches?
+
+### nun-at-the-sea · imaginal
+When the ground goes out from under us, when a plan collapses or news arrives, the first impulse is to grab something solid. Anything. But there's a teaching that the groundlessness itself is where we wake up. Picture standing on a cliff in a high wind, not falling, just unprotected. Uranus puts us there. It's frightening, and it's also very fresh, like the air after lightning. What changed recently that you're still trying to hold onto? Write about standing there without holding on.
 
 ## Figure prompts
 

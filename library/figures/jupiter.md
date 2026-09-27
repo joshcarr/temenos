@@ -5,6 +5,7 @@ glyph: ♃
 epithets: [the Great Host, the Tavern-King, the Thunderer]
 colour: "#3a55a4"   # ultramarine
 voices:
+  nun-at-the-sea: 1
   tavern-mystic: 3
   mythographer: 3
   old-man-at-the-lake: 1
@@ -44,6 +45,9 @@ Odin gave an eye to drink one mouthful from the well of wisdom. Brigid asked the
 
 ### old-man-at-the-lake · imaginal
 People have told me all my life that they want meaning, as if it were a coat they could buy. But the psyche makes meaning the way a tree makes leaves. You cannot stop it, only starve it. Jupiter is that growing thing in you, the part that wants a larger story. Be careful; he also likes to preach. Ask him what he believes, and then ask what he has actually seen. Write down the second answer.
+
+### nun-at-the-sea · trickster
+Here's the joke on all of us: we keep thinking we'll relax once things are finally sorted. The right house, the right work, the right person, and then we'll be happy. Jupiter is generous, and gives us plenty, and we immediately start worrying about losing it. There's no final arrangement. There's only this, which is quite a lot, actually. Write a list of what's already here that you haven't been counting. Don't make it profound. The spoon, the window, the dog. Plenty.
 
 ## Figure prompts
 

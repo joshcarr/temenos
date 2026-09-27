@@ -5,6 +5,7 @@ glyph: ♆
 epithets: [the Sea-Dreamer, the Veiled One, the Keeper of the Tide-Pool]
 colour: "#6f5b9a"   # sea violet
 voices:
+  nun-at-the-sea: 2
   old-man-at-the-lake: 3
   pond-walker: 2
   tavern-mystic: 2
@@ -44,6 +45,9 @@ Early fog on the pond, so thick the far bank was only a rumour. A swan came out 
 
 ### tavern-mystic · trickster
 Neptune never pays for his drinks; he just smiles, and you forget to ask. He'll tell you the sea is in your glass, and for a moment it is. I adore him. I also count the spoons when he leaves. Beloved, the longing in you is holy, and it has been trying to get satisfied at the wrong bar. No person, no purchase, no endless scroll will fill a thirst that's really for the ocean. Write down what you're thirsty for. Then have a glass of water.
+
+### nun-at-the-sea · synchronicity
+We have a lot of ways to numb out: the phone, the extra glass, the daydream, keeping busy. None of them are wicked. They're just ways of not being here, because here is sometimes uncomfortable. Neptune loves an exit. The practice is gentle: notice when you're reaching for one, and pause for one breath before you reach. You don't have to stop. You're only getting curious about what you're leaving. Write down one thing you reached for today, and what you felt just before.
 
 ## Figure prompts
 
