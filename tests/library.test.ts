@@ -53,10 +53,10 @@ describe.each(['dawn', 'dusk'] as const)('%s anchors', (session) => {
 });
 
 describe('voices and signs', () => {
-  it('has all nine voices, and every figure affinity names a real voice', async () => {
+  it('has all ten voices, and every figure affinity names a real voice', async () => {
     const { loadLibrary } = await import('./helpers/library');
     const lib = loadLibrary();
-    expect(Object.keys(lib.voices)).toHaveLength(9);
+    expect(Object.keys(lib.voices)).toHaveLength(10);
     for (const v of Object.values(lib.voices)) expect(v.name && v.spirit && v.persona).toBeTruthy();
     for (const f of Object.values(lib.figures)) {
       for (const v of Object.keys(f.voices)) expect(lib.voices[v], `${f.id} → ${v}`).toBeDefined();
@@ -80,6 +80,16 @@ describe('myths', () => {
     }
     for (const f of Object.values(lib.figures)) {
       expect(f.myths.filter((x) => lib.myths[x.id]).length, `${f.id} retellings`).toBeGreaterThanOrEqual(2);
+    }
+  });
+});
+
+describe('voice coverage', () => {
+  it('every voice with a reading can be pinned: each has an affinity on the figures it reads for', async () => {
+    const { loadLibrary } = await import('./helpers/library');
+    const lib = loadLibrary();
+    for (const f of Object.values(lib.figures)) for (const r of f.readings) {
+      expect(f.voices[r.voice], `${f.id} reads in ${r.voice} but gives it no weight`).toBeGreaterThan(0);
     }
   });
 });

@@ -5,6 +5,9 @@ glyph: ☉
 epithets: [the King in the Sun, the Heart-Fire, the One Who Shines]
 colour: "#e3a92b"   # cadmium yellow
 voices:
+  fairy-tale-reader: 2
+  grief-walker: 3
+  nun-at-the-sea: 1
   engraver: 3
   mythographer: 2
   howler: 2
@@ -45,6 +48,15 @@ The Egyptians said the sun dies every evening. Ra boards his night boat and sail
 
 ### howler · trickster
 Hail the Sun, show-off, gold-toothed, blazing on the bus stop and the car park and the dog asleep on the porch! Hail every ordinary thing lit up like a saint for thirty seconds at five o'clock! The Sun never asks if it deserves to shine, it just does it all day with its shirt off. Take a page and write down every time you shone a little, in the small ways: the good joke, the fixed hinge, the kind word. Brag on paper. Nobody's reading.
+
+### nun-at-the-sea · synchronicity
+There's a teaching that underneath all our confusion is something that was never damaged: a basic warmth and brightness, like the sun behind cloud. We spend a lot of energy trying to become worthy of it, as if it had to be earned. It doesn't. The clouds are real, and so is the sun. You don't have to manufacture your goodness today; you only have to stop hiding from it. Write down one moment when you glimpsed it lately, in yourself or someone else, and didn't look away.
+
+### grief-walker · synchronicity
+Now, every evening the sun goes down, and the old ones never took it for granted. They sang it under. They knew that light which never sets is a kind of tyranny, and that a day is precious because it ends. We've forgotten how to let things set. We keep the lamps on and the screens lit and call it living. Something in your life is going down into its evening. Let it. Write a few lines to sing it under, and notice what the dark lets you see.
+
+### fairy-tale-reader · trickster
+In the tales the king always has a golden ball, or a golden apple, or a golden bird, and it's always getting lost down a well or stolen from the garden at night. Nobody asks why the king can't hold onto his gold. I'll tell you why: gold wants to move. Your own light is like that. Hoard it, and some frog will fetch it back for a price. Where are you clutching your golden ball? And what did you dream?
 
 ## Figure prompts
 

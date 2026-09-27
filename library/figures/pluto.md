@@ -5,10 +5,11 @@ glyph: ♇
 epithets: [the Lord Below, the Keeper of Seeds, the Rich One]
 colour: "#6e2230"   # oxblood
 voices:
+  nun-at-the-sea: 2
   grief-walker: 3
   old-man-at-the-lake: 2
   fairy-tale-reader: 2
-  engraver: 1
+  engraver: 2
 ---
 
 # Pluto: the Lord Below, the Keeper of Seeds
@@ -45,6 +46,12 @@ The Greeks called him Plouton, the rich one, because all the wealth is undergrou
 
 ### fairy-tale-reader · trickster
 Every fairy tale has a room you mustn't open. Bluebeard's little key, the thirteenth door, the cellar. And every heroine opens it, and it's always worse than she feared and better for her in the end. So let's not be precious. There's a door in your house you keep walking past. You know which one. You don't have to go in. Just stand outside it on the page and describe the handle. And what did you dream?
+
+### nun-at-the-sea · imaginal
+Sooner or later things come apart: a relationship, a plan, the picture of ourselves we worked so hard on. We tend to treat each collapse as a mistake, when it might be the most honest thing that has happened in years. Picture sitting in the rubble of something that ended, not rebuilding yet, just sitting in the dust with light coming through where the roof used to be. Pluto keeps that place. What came apart for you, lately or long ago? Write what you can see now that the walls are down.
+
+### engraver · trickster
+The Lord Below keeps a shop under the city, and everything you ever threw away is on his shelves: the tantrum, the teenage poem, the grudge in its tin, the love you swore you were over. He sells them back at a fair price. Nothing is lost in the cellar; it only ripens. Go down and browse. Pick one thing off the shelf you'd forgotten owning. Write what it cost you to bury it, and what it costs to buy it back.
 
 ## Figure prompts
 

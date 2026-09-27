@@ -5,11 +5,13 @@ glyph: ☿
 epithets: [the Messenger, the Crossroads Keeper, the Quick One]
 colour: "#5f8a6e"   # slate green
 voices:
-  tavern-mystic: 3
+  old-man-at-the-lake: 2
+  nun-at-the-sea: 1
+  tavern-mystic: 2
   mythographer: 2
   engraver: 2
   howler: 2
-  fairy-tale-reader: 1
+  fairy-tale-reader: 2
 ---
 
 # Mercury: the Messenger, the Crossroads Keeper
@@ -45,6 +47,15 @@ The Messenger has wings at his heels and a snake twined twice about his staff, a
 
 ### tavern-mystic · trickster
 Mercury came in quick as a cat and sold me three opinions before I had my coat off. All three were brilliant. All three were about other people. Your mind is a gorgeous little thief and I adore it, but it has been stealing your attention from your own heart and selling it back to you at a mark-up. Let it talk, let it dazzle. Then ask it, sweetly, what it's running from. Write down whatever it says next, especially if it's rude.
+
+### nun-at-the-sea · trickster
+The mind is a wonderful storyteller, and it never runs out of material. Somebody doesn't answer a message, and within a minute there's a whole novel: what they meant, what it says about you, what you should have done years ago. Mercury loves this. It's quite funny, if you can catch it. So here's the practice: notice the story starting, call it thinking, and come back to the breath. Then write down the story you told yourself most often today. Read it back. Does it need to be true?
+
+### fairy-tale-reader · imaginal
+In the tales there's always a talking animal at the crossroads: a fox, a raven, a little grey man. The clever sisters ignore it and ride on. The youngest stops, shares her bread and listens. That's the whole trick. The messenger is never where you'd expect wisdom to be. Who or what has been trying to tell you something that you've been too busy to hear? A child, a dream, an ache in your side? And what did you dream?
+
+### old-man-at-the-lake · synchronicity
+The alchemists loved Mercurius more than all their other figures, and trusted him least. He was quicksilver: you could never hold him, and he was present in every stage of the work, poison at the start and medicine at the end. I have met him in dreams as a boy, a snake, a messenger, a thief. He always arrives when the mind is too sure of itself. Where have you been very certain lately? Let the quick one in to make a little mischief. Write down what he says.
 
 ## Figure prompts
 

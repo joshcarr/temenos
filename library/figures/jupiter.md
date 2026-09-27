@@ -5,10 +5,13 @@ glyph: ♃
 epithets: [the Great Host, the Tavern-King, the Thunderer]
 colour: "#3a55a4"   # ultramarine
 voices:
-  tavern-mystic: 3
+  pond-walker: 2
+  mountain-hand: 3
+  nun-at-the-sea: 1
+  tavern-mystic: 2
   mythographer: 3
   old-man-at-the-lake: 1
-  howler: 1
+  howler: 2
 ---
 
 # Jupiter: the Great Host, the Thunderer
@@ -44,6 +47,18 @@ Odin gave an eye to drink one mouthful from the well of wisdom. Brigid asked the
 
 ### old-man-at-the-lake · imaginal
 People have told me all my life that they want meaning, as if it were a coat they could buy. But the psyche makes meaning the way a tree makes leaves. You cannot stop it, only starve it. Jupiter is that growing thing in you, the part that wants a larger story. Be careful; he also likes to preach. Ask him what he believes, and then ask what he has actually seen. Write down the second answer.
+
+### nun-at-the-sea · trickster
+Here's the joke on all of us: we keep thinking we'll relax once things are finally sorted. The right house, the right work, the right person, and then we'll be happy. Jupiter is generous, and gives us plenty, and we immediately start worrying about losing it. There's no final arrangement. There's only this, which is quite a lot, actually. Write a list of what's already here that you haven't been counting. Don't make it profound. The spoon, the window, the dog. Plenty.
+
+### mountain-hand · synchronicity
+An old-growth cedar doesn't hurry and doesn't hoard. It takes what the rain gives, lets the moss and the owls and the fungus have their share, and in five hundred years it's the biggest thing on the ridge. That's Jupiter working right: growth that feeds everything around it. Look at what's growing in your life. Is it the cedar kind, or the kind that shades everything else out? Write down one thing you could share from what you've got.
+
+### pond-walker · imaginal
+The geese came over this morning, a long ragged vee, calling to each other the whole way. I don't know where they were going, only that they were sure of it, and that they went together. Jupiter is the part of you that believes the journey means something. Imagine yourself in that line, with your own kind on either side, over country you've never seen. It's lovely. Then the question: who are you flying with, and do they know how much you'd miss them?
+
+### howler · trickster
+Jupiter the big spender, Jupiter the buyer of rounds, Jupiter at the wedding dancing with the grandmother and the waiter and the dog! Holy the extra helping, holy the tip too large, holy the book bought on impulse and loved for thirty years! Holy the luck you didn't deserve and got anyway! Now write it down, every lucky break you can remember, the parking space, the stranger's kindness, the test you somehow passed. A long list. The world has been generous and you've been keeping it quiet.
 
 ## Figure prompts
 
