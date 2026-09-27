@@ -6,7 +6,7 @@ The brief is in `docs/temenos-build-brief.md`, the research behind it in `docs/r
 
 ## Status
 
-M0 (chart math) is done: the natal chart matches astro.com to the arcsecond for all eleven figures. M1 decisions are made (see `DECISIONS.md`); the Saturn, Moon and Mercury library drafts are up for review in `library/`.
+M1 is built: the installable, offline Plate with all eleven figures, 308 anchor re-cuts, 30 myths and nine voices. Next is M2 (the voices, through the API).
 
 ## Development
 
@@ -14,8 +14,11 @@ Node 22 or later.
 
 ```sh
 npm install
-npm test          # ephemeris, houses and time-zone tests
+npm run dev       # the app at http://localhost:5173
+npm test          # ephemeris, houses, library and Plate rules
 npm run typecheck
+npm run check     # Svelte components
+npm run build     # production build in dist/
 npm run measure   # worst-case gap against the independent references, over 400 charts
 ```
 
@@ -38,11 +41,30 @@ npm run measure   # worst-case gap against the independent references, over 400 
 
 3. `npm run chart` prints the chart in astro.com notation, with the gap in arcseconds next to anything you pasted.
 
+## Deploying to Cloudflare Pages
+
+One-time setup:
+
+1. In the Cloudflare dashboard, go to **Workers & Pages → Create → Pages → Connect to Git** and pick `joshcarr/temenos`.
+2. Production branch: `main`. Framework preset: **None**. Build command: `npm run build`. Build output directory: `dist`.
+3. Save and deploy. The site appears at `https://temenos.pages.dev` (or a similar name Cloudflare assigns).
+
+Every push to `main` deploys. Other branches get preview URLs.
+
+## Installing on the iPhone
+
+Open the site in Safari, tap **Share → Add to Home Screen**, then open Temenos from the home screen and go through onboarding once. Draw one Plate while online so everything is cached; after that it works in airplane mode.
+
 ## Layout
 
 ```
-docs/        brief and research
-src/astro/   ephemeris engine wrapper, time zones, notation
-tests/       vitest suites; tests/reference holds the independent calculations
-scripts/     chart printer and accuracy measurement
+docs/          brief, research, M1 proposal
+library/       everything the Plate says, as hand-editable markdown (see library/README.md)
+src/astro/     ephemeris engine, time zones, Moon phase, aspects, seasons
+src/plate/     Plate composition, selection and anti-staleness rules, seeded randomness
+src/image/     the image grammar: sky → forms, colours and the walking line
+src/ui/        Svelte screens
+src/store/     IndexedDB: profile, settings, Plates
+scripts/       asset preparation, chart printer, accuracy measurement
+tests/         vitest suites; tests/reference holds the independent calculations
 ```

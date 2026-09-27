@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Library } from '../library';
+  import { yesterdayFraming } from '../plate/compose';
   import type { Plate } from '../plate/types';
   import MoonGlyph from './MoonGlyph.svelte';
   import PageMark from './PageMark.svelte';
@@ -14,8 +15,10 @@
   const myth = $derived(plate.myth ? lib.myths[plate.myth] : undefined);
   const lensName = $derived(plate.lens[0].toUpperCase() + plate.lens.slice(1));
   const kindLabel = { threshold: 'Threshold', anchor: 'Anchor', figure: 'Figure', wild: 'Wild card' } as const;
-  const familyOriginal = (id?: string) =>
-    [...lib.anchors.dawn, ...lib.anchors.dusk].find((f) => f.id === id && f.session === (plate.session === 'dawn' ? 'dawn' : 'dusk'))?.original;
+  const familyOriginal = (id?: string) => {
+    const o = [...lib.anchors.dawn, ...lib.anchors.dusk].find((f) => f.id === id && f.session === (plate.session === 'dawn' ? 'dawn' : 'dusk'))?.original;
+    return o && plate.session === 'yesterdays-dusk' ? yesterdayFraming(o) : o;
+  };
 
   // Text arrives after the image has drawn itself.
   const delay = (i: number) => (animate ? `animation-delay: ${2.6 + i * 0.35}s` : 'animation: none');

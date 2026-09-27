@@ -90,3 +90,27 @@ Dawn is before 2pm and Dusk after 5pm, as the brief says. Between 2 and 5pm the 
 **Effect on you.** Draw the Plate, copy the mark while the image is on screen, then read down.
 
 **Why.** It belongs next to the image it comes from. Your call, from the mockup review.
+
+## M1-6. Prompts built from each figure's images and myths, after the hand-written ones
+
+**Problem.** Wild cards must never repeat, and nothing else may repeat inside 30 days. At two Plates a day that's about 730 wild cards a year, and a long season can bring the same figure up every other session. No hand-written pool lasts.
+
+**Effect on you.** You see the hand-written prompts first. Only when a figure's pool for the month is spent do you meet lines like "A plumb line is the answer. Write the question," built from that figure's own images and myths. They stay in the figure's world rather than going generic.
+
+**Why.** Ten templates across each figure's eight images give 80 wild cards per figure, 880 in all, before M2's voices start writing new ones. Rejected: allowing wild cards to repeat after a year (the brief says never), and waiting for M2 (the offline Plate has to stand on its own). A test draws two months of Plates twice a day and checks every rule.
+
+## M1-7. "Did it land?" ships now, not in M4
+
+**Problem.** Weighting from landed marks is M4, but it can only weigh what was recorded.
+
+**Effect on you.** From the first morning, opening the app asks about the last Plate, one tap per prompt, skippable. It never asks about a Plate drawn in the last four hours, since you may still be writing.
+
+**Why.** It costs one small screen, and by M4 there will be weeks of your own marks to learn from instead of none. The weighting code is already in and already gentle: landed marks raise a family, figure, voice or lens by a quarter; unmarked ones lower it a little; nothing goes below 40% of normal.
+
+## M1-8. Hosting on Cloudflare Pages from the git repo
+
+**Problem.** The app has to reach your phone, update itself when I push, and keep working offline.
+
+**Effect on you.** One-time setup in the Cloudflare dashboard. After that every push deploys, and the installed app picks up the new version the next time you open it.
+
+**Why.** It's what the brief names, it's free at this size, and M2's `/api/plate` function will live in the same project. The build fetches nothing at runtime: the ephemeris, fonts and library are all bundled and precached (about 3 MB, once).

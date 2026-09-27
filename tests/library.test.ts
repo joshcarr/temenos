@@ -51,3 +51,35 @@ describe.each(['dawn', 'dusk'] as const)('%s anchors', (session) => {
     }
   });
 });
+
+describe('voices and signs', () => {
+  it('has all nine voices, and every figure affinity names a real voice', async () => {
+    const { loadLibrary } = await import('./helpers/library');
+    const lib = loadLibrary();
+    expect(Object.keys(lib.voices)).toHaveLength(9);
+    for (const v of Object.values(lib.voices)) expect(v.name && v.spirit && v.persona).toBeTruthy();
+    for (const f of Object.values(lib.figures)) {
+      for (const v of Object.keys(f.voices)) expect(lib.voices[v], `${f.id} → ${v}`).toBeDefined();
+      for (const r of f.readings) expect(lib.voices[r.voice], `${f.id} reading → ${r.voice}`).toBeDefined();
+    }
+    expect(Object.keys(lib.signs)).toHaveLength(12);
+  });
+});
+
+describe('myths', () => {
+  it('are 300–500 word retellings that credit a culture and link to real figures', async () => {
+    const { loadLibrary } = await import('./helpers/library');
+    const lib = loadLibrary();
+    expect(Object.keys(lib.myths).length).toBeGreaterThanOrEqual(30);
+    for (const m of Object.values(lib.myths)) {
+      const words = m.body.split(/\s+/).length;
+      expect(words, m.id).toBeGreaterThanOrEqual(300);
+      expect(words, m.id).toBeLessThanOrEqual(500);
+      expect(m.culture, m.id).toBeTruthy();
+      for (const f of m.figures) expect(lib.figures[f]?.myths.some((x) => x.id === m.id), `${m.id} ↔ ${f}`).toBe(true);
+    }
+    for (const f of Object.values(lib.figures)) {
+      expect(f.myths.filter((x) => lib.myths[x.id]).length, `${f.id} retellings`).toBeGreaterThanOrEqual(2);
+    }
+  });
+});
