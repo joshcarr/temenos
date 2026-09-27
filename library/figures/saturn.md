@@ -5,10 +5,11 @@ glyph: ♄
 epithets: [the Old King, the Stonemason, the Keeper of Hours]
 colour: "#7a6a58"   # lead, grey-brown
 voices:              # affinity weights when the sky chooses the voice
+  engraver: 2
   nun-at-the-sea: 3
   mountain-hand: 3
   old-man-at-the-lake: 2
-  grief-walker: 2
+  grief-walker: 3
   fairy-tale-reader: 1
   tavern-mystic: 1
 ---
@@ -51,6 +52,12 @@ The Old King came into the tavern with his ledger, frowning at everyone's tab. I
 
 ### nun-at-the-sea · synchronicity
 There's a moment, just before the old reaction, when you can feel the itch start. The jaw tightens. The story begins: this always happens, I should have known. Saturn is the teacher who keeps walking us back to that exact spot. Not to punish us; so we can practise staying. What if you didn't fix the discomfort, or explain it, or leave? Let it be as heavy as it is, and breathe. Write down where you felt the tightening today, and what happened when you stayed one breath longer.
+
+### grief-walker · trickster
+Now, the old ones had a name for the man who refused to get old: they called him a fool, and they fed him anyway. Saturn comes for all of us with his sickle and his ledger, and we've built a whole civilisation on pretending he isn't at the door. It's a bit funny, if you let it be. Here's a small defiance: count your grey hairs, or your aches, or your years, out loud, the way you'd count blessings. Then write down what time has given you that youth never could.
+
+### engraver · synchronicity
+The Old King builds with lead and hours, and every wall he raises is also a gate, if you walk far enough along it. Limit is the shape of the vessel; without it the wine is only a stain on the floor. Do not curse the mould that makes the bell. Somewhere this week you met a wall. Stand before it as a mason stands, measuring, not pleading. Write down what the wall is for, and what it keeps whole.
 
 ## Figure prompts
 

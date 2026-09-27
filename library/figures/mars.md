@@ -5,6 +5,8 @@ glyph: ♂
 epithets: [the Red Rider, the Smith of the Will, the Spear-Carrier]
 colour: "#d2472f"   # vermilion
 voices:
+  tavern-mystic: 2
+  pond-walker: 2
   nun-at-the-sea: 2
   mountain-hand: 3
   howler: 2
@@ -48,6 +50,12 @@ In the tales, the third son is always told to sit by the fire while his brothers
 
 ### nun-at-the-sea · synchronicity
 Anger has a lot of energy in it, and the energy isn't the problem. The trouble starts with the story we pour it into, the one that says I'm right and they must pay. Try this: next time the heat comes up, drop the story and feel the heat. Where is it? The chest, the hands, the jaw? It's sharp and alive, and it passes if you let it be only heat. Mars is that fire before it has a target. Write about the last time you felt it, and what you did with it.
+
+### pond-walker · imaginal
+A wren was scolding a cat this morning, a bird smaller than my thumb shouting at something a hundred times its size, and the cat, astonishingly, left. I've thought about it all day. Mars isn't only the soldier. He's the wren too, the small fierce thing that won't stand for it. Imagine that wren on your shoulder the next time you need to say no. It's a lovely thought. And then the question: what have you let sit on your doorstep that you should have shouted at?
+
+### tavern-mystic · trickster
+Mars stomped into the tavern spoiling for a fight, and nobody would give him one, so he arm-wrestled the bar, and the bar won. We laughed until he laughed too. Beloved, your fire is precious, but it has been wasting itself on parking tickets and slow queues and the neighbour's hedge. Bring it here and spend it on something worth the heat. Write down the one thing that deserves your whole fierce heart, and cross off three that don't.
 
 ## Figure prompts
 

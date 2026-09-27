@@ -5,6 +5,7 @@ glyph: ♆
 epithets: [the Sea-Dreamer, the Veiled One, the Keeper of the Tide-Pool]
 colour: "#6f5b9a"   # sea violet
 voices:
+  grief-walker: 3
   nun-at-the-sea: 2
   old-man-at-the-lake: 3
   pond-walker: 2
@@ -48,6 +49,9 @@ Neptune never pays for his drinks; he just smiles, and you forget to ask. He'll 
 
 ### nun-at-the-sea · synchronicity
 We have a lot of ways to numb out: the phone, the extra glass, the daydream, keeping busy. None of them are wicked. They're just ways of not being here, because here is sometimes uncomfortable. Neptune loves an exit. The practice is gentle: notice when you're reaching for one, and pause for one breath before you reach. You don't have to stop. You're only getting curious about what you're leaving. Write down one thing you reached for today, and what you felt just before.
+
+### grief-walker · imaginal
+Now, the sea takes things. Every coastal people knew it and made their peace with it, the way you'd make peace with a difficult god. Picture a woman on a stone pier at dusk throwing flowers onto the water for someone who didn't come home. She isn't asking for them back. She's keeping faith with the loss. Neptune asks that of us too: not to drown in longing, and not to deny it either. What have you given to the sea? Write it a few lines, and throw them in.
 
 ## Figure prompts
 

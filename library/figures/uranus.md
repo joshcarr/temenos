@@ -5,6 +5,7 @@ glyph: ♅
 epithets: [the Lightning-Bringer, the Unbinder, the Fire-Thief]
 colour: "#2aa89c"   # electric teal
 voices:
+  mountain-hand: 3
   nun-at-the-sea: 1
   engraver: 3
   howler: 3
@@ -48,6 +49,9 @@ The Monkey King ate the peaches of immortality, drank the emperor's wine, rubbed
 
 ### nun-at-the-sea · imaginal
 When the ground goes out from under us, when a plan collapses or news arrives, the first impulse is to grab something solid. Anything. But there's a teaching that the groundlessness itself is where we wake up. Picture standing on a cliff in a high wind, not falling, just unprotected. Uranus puts us there. It's frightening, and it's also very fresh, like the air after lightning. What changed recently that you're still trying to hold onto? Write about standing there without holding on.
+
+### mountain-hand · trickster
+Lightning hit the snag on the ridge one summer. Split it top to bottom, set it smoking, and by the next spring woodpeckers had moved into the crack and the tree was busier than it had ever been alive. Nature doesn't hold a grudge against the bolt. Uranus comes like that. So here's a job: find something in your life that got split open lately and look at it the way a woodpecker would. Write down what's moved in.
 
 ## Figure prompts
 

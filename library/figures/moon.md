@@ -5,12 +5,13 @@ glyph: ☽
 epithets: [the Mother of Tides, the Night Gardener, the Keeper of the Well]
 colour: "#a9bccf"   # pale silver-blue
 voices:
+  mythographer: 2
   nun-at-the-sea: 2
   pond-walker: 3
   fairy-tale-reader: 2
   howler: 2
   old-man-at-the-lake: 1
-  grief-walker: 1
+  grief-walker: 3
 ---
 
 # Moon: the Mother of Tides, the Night Gardener
@@ -50,6 +51,12 @@ Holy the Moon, holy the dirty dishes she shines on, holy the laundry left in the
 
 ### nun-at-the-sea · imaginal
 Feelings come like weather over the water: a squall, a flat grey calm, a sudden break of light. We're taught to chase them or wall them off. There's another way, which is to sit with them the way you'd sit with a frightened child in the night, not talking much, just staying. The Moon is that child and that mother both. Breathe in whatever mood is here, all of it. Breathe out a little room around it. Then write down the weather, without trying to change it.
+
+### grief-walker · imaginal
+Now, there's a grief that has no name because nothing dramatic happened. The children grew. The house got quiet. The friend moved away and the calls thinned out. The Moon keeps those losses, the small tidal ones, and she doesn't ask you to get over them. Picture her walking a dark shore, picking up what the water left: a shoe, a shell, a letter gone soft. She hands you one. What is it? Write about the small loss it stands for, and honour it properly.
+
+### mythographer · synchronicity
+In China they say Chang'e drank the elixir and floated to the Moon, where only a hare keeps her company, pounding medicine in a mortar. In India the hare offered its own body to a hungry stranger and was drawn on the Moon for it. In Polynesia, Hina climbed there to escape a life of endless work. Three peoples looked at the same face in the sky and saw someone who needed, or gave, a place to rest. Who needs that from you right now? And where is yours?
 
 ## Figure prompts
 

@@ -5,11 +5,12 @@ glyph: ♀
 epithets: [the Rose-Keeper, the Morning Star, the Lady of the Threshold]
 colour: "#c4506a"   # rose madder
 voices:
+  mountain-hand: 3
   nun-at-the-sea: 2
   pond-walker: 3
-  tavern-mystic: 3
+  tavern-mystic: 2
   engraver: 2
-  howler: 1
+  howler: 2
 ---
 
 # Venus: the Rose-Keeper, the Morning Star
@@ -48,6 +49,12 @@ She stands at the gate of the morning with a rose in one hand and a knife in the
 
 ### nun-at-the-sea · imaginal
 Loving-kindness starts close to home, which is inconvenient, because home is where we know all the bad habits. Venus asks whether you can be friends with yourself: not the improved version, this one, who is tired and a bit vain and wants to be liked. Imagine sitting across a small table from that person with two cups of tea. You don't have to fix anything. Only stay, and be kind, the way you would with a friend having a hard week. What would you say to them? Write it down.
+
+### mountain-hand · synchronicity
+The garden's mostly work: turning compost, pulling bindweed, hauling water in August. Then one morning the sweet peas open along the fence, and the whole thing makes sense for about a week. Venus is those sweet peas. She's also the digging, if you pay attention: love as something you tend, not something that happens to you. What are you tending with your hands that you love? Write down one small chore of love you did lately, and one you've let slide.
+
+### howler · trickster
+Venus in her bathrobe, Venus with lipstick on her teeth, Venus singing badly in the car with the windows down! Holy the crush at fifty, holy the love letter never sent, holy the peach eaten over the sink with juice running to the elbow! Holy the ordinary Tuesday body, loved! Stop being so tasteful about your pleasures. Write them all down, the sweet ones and the silly ones and the ones you'd be embarrassed to tell your mother. Leave nothing out for being small.
 
 ## Figure prompts
 
