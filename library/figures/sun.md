@@ -34,6 +34,7 @@ The Self as the centre of the psyche, and the solar hero Jung followed through *
 - amaterasu-cave: Amaterasu hides in a cave and the world goes dark, until a goddess dances so wildly that the gods' laughter draws her out (Japanese)
 - phaethon: Phaethon begs to drive his father's sun chariot for a single day and can't hold the horses (Greek)
 - maui-sun: Maui snares the sun with ropes and beats it until it agrees to cross the sky more slowly (Polynesian)
+- saranyu-shadow: Saranyu can't bear the Sun's brilliance, leaves her shadow in her place, and he has to be shaved down on a lathe to win her back (Indian, Vedic and Puranic)
 
 ## Images
 A sunflower turning. A lion asleep in the heat. A gold coin. A brass door knocker. A bonfire at midsummer. A cat in a patch of light. A crown of dry grass. Noon with no shadow.
@@ -57,6 +58,9 @@ Now, every evening the sun goes down, and the old ones never took it for granted
 
 ### fairy-tale-reader · trickster
 In the tales the king always has a golden ball, or a golden apple, or a golden bird, and it's always getting lost down a well or stolen from the garden at night. Nobody asks why the king can't hold onto his gold. I'll tell you why: gold wants to move. Your own light is like that. Hoard it, and some frog will fetch it back for a price. Where are you clutching your golden ball? And what did you dream?
+
+### pond-walker · imaginal
+This morning the sunflowers along the fence had all turned east before I was out of bed. Nobody told them to. They simply face the light, and in the evening they turn back so they're ready again. I stood there a long while with my coffee going cold, being looked at by sunflowers. Imagine the Sun as something that turns toward you, not something you have to climb toward. Imagine sitting in that warmth without earning it. And now the question: what in your life have you faced away from so long that you've forgotten it gives off light?
 
 ## Figure prompts
 

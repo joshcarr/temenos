@@ -10,6 +10,7 @@ voices:
   old-man-at-the-lake: 2
   fairy-tale-reader: 2
   engraver: 2
+  mythographer: 2
 ---
 
 # Pluto: the Lord Below, the Keeper of Seeds
@@ -52,6 +53,9 @@ Sooner or later things come apart: a relationship, a plan, the picture of oursel
 
 ### engraver · trickster
 The Lord Below keeps a shop under the city, and everything you ever threw away is on his shelves: the tantrum, the teenage poem, the grudge in its tin, the love you swore you were over. He sells them back at a fair price. Nothing is lost in the cellar; it only ripens. Go down and browse. Pick one thing off the shelf you'd forgotten owning. Write what it cost you to bury it, and what it costs to buy it back.
+
+### mythographer · synchronicity
+Isis walked the whole of Egypt gathering the pieces of Osiris from the reeds. In Japan, Izanagi went down after his dead wife Izanami and lit a torch where he'd been told not to look. In Sumer, Inanna hung three days on a hook in her sister's hall. Every people seems to know that something has to go into the dark before it can be whole again, and that someone has to go after it. You may have met a small version of this lately: something lost, scattered or sent below. Which piece of it have you found so far, and who went looking?
 
 ## Figure prompts
 

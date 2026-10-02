@@ -33,6 +33,7 @@ The wounded healer, an image Jung returned to often: the analyst's own wounds ar
 - fisher-king: The Fisher King's wound won't heal, and the land lies waste until someone asks him the right question (Arthurian, Welsh and French)
 - asclepius: Asclepius, taught by Chiron, heals so well that he raises the dead, and Zeus strikes him down (Greek)
 - handless-maiden: A girl whose hands were cut off lives seven years in a forest, and her hands grow back as she cares for her child (German, Brothers Grimm)
+- philoctetes: Philoctetes, bitten by a snake on the way to Troy, is left alone on an island with a wound that stinks and a bow the Greeks can't win without (Greek)
 
 ## Images
 A scar gone silver. A cracked bowl mended with gold. A centaur at the edge of a wood. A herb growing in a cracked pot. A bridge between two banks. A bandage drying on a line. Firelight in a mountain cave. An arrow laid down.

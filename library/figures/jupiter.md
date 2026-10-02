@@ -33,6 +33,7 @@ The generous father and the wise old man in his expansive mood. The religious fu
 - odin-well: Odin gives an eye to drink one mouthful from Mimir's well of wisdom (Norse)
 - brigid-cloak: Brigid asks the king for only as much land as her cloak will cover, and the cloak spreads for miles (Irish)
 - hotei-sack: Hotei, the laughing monk, walks the roads with a sack that never empties (Chinese and Japanese Buddhist)
+- stone-soup: Hungry soldiers make soup from three stones in the village square, and the villagers who swore they had nothing bring a feast (European folk tale)
 
 ## Images
 A long table set for strangers. An oak in full leaf. A peacock's tail. A bowl that never empties. Thunder a long way off. A sack of gifts. An open road. A lighthouse.

@@ -33,6 +33,7 @@ Libido as Jung first meant it: psychic energy as a whole, not only desire. The w
 - tyr-hand: Tyr puts his hand in the wolf Fenrir's mouth as a pledge so the gods can bind him, and loses it (Norse)
 - cu-chulainn-vats: Cú Chulainn comes home from battle so hot with rage that he's plunged into three vats of cold water, and the first one bursts (Irish)
 - ogun-road: Ogun clears the first road through the forest with his iron blade so the other gods can reach the earth (Yoruba)
+- mulan: Mulan buys a horse in the four markets, rides to war in her old father's place, and comes home twelve years later to put on her own clothes (Chinese)
 
 ## Images
 A forge at night. A red kite over a field. An axe in a chopping block. A struck match. A spear planted in the ground. Nettles. A horse pawing at a gate. Iron filings on paper.

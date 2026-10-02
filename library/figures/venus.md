@@ -32,6 +32,7 @@ Eros as the principle of relatedness. The soul-image projected onto whoever carr
 - psyche-lamp: Psyche lifts a lamp to see the husband she's forbidden to look at, and a drop of hot oil wakes him (Roman)
 - philemon-baucis: Philemon and Baucis share their last supper with two strangers who turn out to be gods, and ask only never to outlive each other (Roman)
 - oshun-river: When the other gods tried to run the world without Oshun, the rivers dried and nothing would grow until they asked her back (Yoruba)
+- weaver-cowherd: The Weaver Girl leaves her loom in the sky for a cowherd, and once a year the magpies make them a bridge across the Milky Way (Chinese and Japanese)
 
 ## Images
 A rose with one petal falling. A copper mirror. The morning star over a roof. A peach cut open. Two cups on a table. A dove on a wire. Silk against a wrist. A garden gate left open.

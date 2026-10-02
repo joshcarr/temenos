@@ -32,6 +32,7 @@ The collective unconscious as an ocean. *Participation mystique*, which Jung bor
 - butterfly-dream: Zhuangzi dreams he's a butterfly and wakes unsure whether he's a man who dreamed of a butterfly or a butterfly dreaming it's a man (Chinese, Taoist)
 - vishnu-ocean: Vishnu sleeps on the coils of a great serpent in the cosmic ocean, and the world is his dream (Indian, Hindu)
 - oisin-tir-na-nog: Oisín rides to the Land of Youth for what seems three years, and comes home to find three hundred have passed (Irish)
+- city-of-ys: Ys, the city built below the tide, drowns when the golden key to its sea gates is stolen, and its bells still ring under the bay (Breton)
 
 ## Images
 Fog on a harbour. A tide-pool with an anemone. A glass float caught in a net. A cello note held long. Sea-glass. A lighthouse beam in mist. A reflection in still water. A dream you can't quite hold.
@@ -52,6 +53,9 @@ We have a lot of ways to numb out: the phone, the extra glass, the daydream, kee
 
 ### grief-walker · imaginal
 Now, the sea takes things. Every coastal people knew it and made their peace with it, the way you'd make peace with a difficult god. Picture a woman on a stone pier at dusk throwing flowers onto the water for someone who didn't come home. She isn't asking for them back. She's keeping faith with the loss. Neptune asks that of us too: not to drown in longing, and not to deny it either. What have you given to the sea? Write it a few lines, and throw them in.
+
+### fairy-tale-reader · trickster
+In the selkie tales the fisherman hides the seal-skin in the rafters, and the woman keeps his house for years, and she's good at it, and she is never quite there. Then one of the children finds the skin. Nobody in the story is a villain. That's the trouble with Neptune: everyone is half-dreaming. So be practical for once. What's your seal-skin, the thing that would take you straight back to the water, and who hid it, you or someone else? Draw the rafters. And what did you dream?
 
 ## Figure prompts
 

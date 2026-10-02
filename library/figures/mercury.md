@@ -33,6 +33,7 @@ Mercurius, the alchemists' favourite and most slippery figure: the spirit hidden
 - anansi-stories: Anansi buys all the world's stories from the Sky God, paying with a python, a leopard and the hornets (Akan, West Africa)
 - eshu-hat: Eshu walks between two friends wearing a hat that's red on one side and black on the other, and they fall out over its colour (Yoruba)
 - thoth-writing: Thoth offers the king the gift of writing, and the king worries it will make people forget how to remember (Egyptian, as Plato tells it)
+- nasreddin-coat: Nasreddin Hodja is ignored at a feast in his work clothes, comes back in a fur coat, and feeds it the soup (Turkish and Persian)
 
 ## Images
 A crossroads. A key. A folded letter. A tortoise-shell lyre. A bead of quicksilver. Winged sandals. A footbridge. A two-coloured hat.

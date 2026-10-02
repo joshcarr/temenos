@@ -22,7 +22,8 @@ describe.each(figureFiles)('figure %s', (file) => {
   });
   it('has prompts under every lens, readings and wild cards', () => {
     for (const lens of LENSES) expect(f.prompts[lens].length).toBeGreaterThanOrEqual(3);
-    expect(f.readings.length).toBeGreaterThanOrEqual(3);
+    // Two readings under every lens, so a figure and lens never have just the one reading to repeat.
+    for (const lens of LENSES) expect(f.readings.filter((r) => r.lens === lens).length, `${f.id} ${lens} readings`).toBeGreaterThanOrEqual(2);
     for (const r of f.readings) expect(LENSES).toContain(r.lens);
     expect(f.wildcards.length).toBeGreaterThanOrEqual(6);
     expect(f.myths.every((m) => m.id && m.culture)).toBe(true);
@@ -70,7 +71,7 @@ describe('myths', () => {
   it('are 300–500 word retellings that credit a culture and link to real figures', async () => {
     const { loadLibrary } = await import('./helpers/library');
     const lib = loadLibrary();
-    expect(Object.keys(lib.myths).length).toBeGreaterThanOrEqual(30);
+    expect(Object.keys(lib.myths).length).toBeGreaterThanOrEqual(52);
     for (const m of Object.values(lib.myths)) {
       const words = m.body.split(/\s+/).length;
       expect(words, m.id).toBeGreaterThanOrEqual(300);
@@ -79,7 +80,7 @@ describe('myths', () => {
       for (const f of m.figures) expect(lib.figures[f]?.myths.some((x) => x.id === m.id), `${m.id} ↔ ${f}`).toBe(true);
     }
     for (const f of Object.values(lib.figures)) {
-      expect(f.myths.filter((x) => lib.myths[x.id]).length, `${f.id} retellings`).toBeGreaterThanOrEqual(2);
+      expect(f.myths.filter((x) => lib.myths[x.id]).length, `${f.id} retellings`).toBeGreaterThanOrEqual(5);
     }
   });
 });

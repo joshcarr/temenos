@@ -12,6 +12,7 @@ voices:
   howler: 2
   old-man-at-the-lake: 1
   grief-walker: 3
+  tavern-mystic: 1
 ---
 
 # Moon: the Mother of Tides, the Night Gardener
@@ -57,6 +58,9 @@ Now, there's a grief that has no name because nothing dramatic happened. The chi
 
 ### mythographer · synchronicity
 In China they say Chang'e drank the elixir and floated to the Moon, where only a hare keeps her company, pounding medicine in a mortar. In India the hare offered its own body to a hungry stranger and was drawn on the Moon for it. In Polynesia, Hina climbed there to escape a life of endless work. Three peoples looked at the same face in the sky and saw someone who needed, or gave, a place to rest. Who needs that from you right now? And where is yours?
+
+### tavern-mystic · trickster
+The Moon came into the tavern in her dressing gown, looking for the cat. She'd lost him, she said, and her keys, and possibly her temper. Dear one, I gave her a stool and a bowl of warm milk and she was a new woman, which is her favourite trick: a new woman every night, and the same one underneath. You're allowed to change your mind as often as she changes her face. Write down three moods you had this week, name each one like a regular at the bar, and buy the grumpiest one a drink.
 
 ## Figure prompts
 

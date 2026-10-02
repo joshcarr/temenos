@@ -5,6 +5,8 @@ import { localParts, localToUtc } from '../src/astro/time';
 import { moonLitPath } from '../src/image/grammar';
 import { DAWN_THRESHOLD, composePlate, defaultSession, yesterdayFraming } from '../src/plate/compose';
 import type { Plate, Session } from '../src/plate/types';
+import { makeDeck } from '../src/plate/deck';
+import { makeRng } from '../src/plate/rng';
 import { loadLibrary } from './helpers/library';
 
 const lib = loadLibrary();
@@ -21,6 +23,25 @@ async function draw(dateKey: string, session: Session, history: Plate[], redraws
 }
 
 const addDays = (k: string, n: number) => new Date(Date.parse(k) + n * 86400000).toISOString().slice(0, 10);
+
+describe('makeDeck', () => {
+  const dealMany = (cards: string[], n: number, opts: Parameters<typeof makeDeck<string>>[3] = {}) => {
+    const past: string[] = [];
+    for (let i = 0; i < n; i++) past.push(makeDeck(cards, (c) => c, past, opts).deal(makeRng(`deck:${i}`)));
+    return past;
+  };
+  it('deals every card once before any card twice', () => {
+    const cards = ['a', 'b', 'c', 'd', 'e'];
+    const past = dealMany(cards, 15);
+    for (let c = 0; c < 3; c++) expect(new Set(past.slice(c * 5, c * 5 + 5)).size).toBe(5);
+  });
+  it('gives a card with three copies about three turns in every cycle, and holds back recent cards across a reshuffle', () => {
+    const cards = 'abcdefghijk'.split(''); // eleven, like the figures
+    const past = dealMany(cards, 390, { copies: (c) => (c === 'a' ? 3 : 1), gap: 2 });
+    expect(past.filter((x) => x === 'a').length / past.length).toBeCloseTo(3 / 13, 1);
+    past.forEach((x, i) => expect(past.slice(Math.max(0, i - 2), i)).not.toContain(x));
+  });
+});
 
 describe('composePlate', () => {
   it('is reproducible from date, session and redraw count', async () => {
@@ -70,6 +91,41 @@ describe('composePlate', () => {
     const fallows = history.filter((p) => p.fallow).length;
     expect(fallows).toBeGreaterThanOrEqual(2);
     expect(fallows).toBeLessThanOrEqual(12);
+  }, 30000);
+
+  it('deals like a deck: the first week has no repeated reading, myth or anchor family, and no figure back within two Plates', async () => {
+    const history: Plate[] = [];
+    let day = '2026-09-26';
+    for (let i = 0; i < 6; i++) {
+      for (const session of ['dawn', 'dusk'] as const) history.push(await draw(day, session, history));
+      day = addDays(day, 1);
+    }
+    const unique = (xs: (string | undefined)[]) => new Set(xs).size === xs.length;
+    expect(unique(history.map((p) => p.reading)), 'reading repeated').toBe(true);
+    expect(unique(history.map((p) => p.myth)), 'myth repeated').toBe(true);
+    for (const s of ['dawn', 'dusk']) {
+      expect(unique(history.filter((p) => p.session === s).map((p) => p.prompts.find((x) => x.kind === 'anchor')?.family)), `${s} family repeated`).toBe(true);
+    }
+    history.forEach((p, i) => {
+      expect(history.slice(Math.max(0, i - 2), i).map((q) => q.figure), `${p.id} figure back too soon`).not.toContain(p.figure);
+    });
+    // All three lenses turn up, and none three times running.
+    expect(new Set(history.map((p) => p.lens)).size).toBe(3);
+    history.slice(2).forEach((p, i) => expect(p.lens === history[i].lens && p.lens === history[i + 1].lens, `${p.id} lens three running`).toBe(false));
+  }, 30000);
+
+  it('deals every reading for a figure before repeating one', async () => {
+    const history: Plate[] = [];
+    let day = '2026-10-01';
+    for (let i = 0; i < 60; i++) {
+      for (const session of ['dawn', 'dusk'] as const) history.push(await draw(day, session, history));
+      day = addDays(day, 1);
+    }
+    for (const fig of Object.values(lib.figures)) {
+      const seen = history.filter((p) => p.figure === fig.id).map((p) => p.reading);
+      const firstCycle = seen.slice(0, fig.readings.length);
+      expect(new Set(firstCycle).size, `${fig.id} repeated a reading early`).toBe(firstCycle.length);
+    }
   }, 30000);
 
   it('reframes for Yesterday\'s Dusk', () => {
