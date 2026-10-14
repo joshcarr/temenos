@@ -11,6 +11,7 @@ voices:
   howler: 3
   mythographer: 1
   tavern-mystic: 1
+  old-man-at-the-lake: 1
 ---
 
 # Uranus: the Lightning-Bringer, the Unbinder
@@ -32,6 +33,7 @@ Tarnas's Prometheus the Awakener, who steals fire and pays for it. The trickster
 - psyche-lamp: Psyche lifts a lamp to see the husband she's forbidden to look at, and a drop of hot oil wakes him (Roman)
 - monkey-king: The Monkey King eats the peaches of immortality, rubs his name out of the ledger of death and turns heaven upside down (Chinese)
 - emperors-clothes: A child in the crowd says out loud that the emperor is wearing nothing at all (Danish, Hans Christian Andersen)
+- golem: A rabbi in Prague makes a giant of river clay and writes truth on its forehead, and one Friday forgets to switch it off (Jewish, Prague)
 
 ## Images
 A lightning strike over the sea. A key snapping in a lock. A kite with a cut string. A spark from a doorknob. A new window in an old wall. A comet. A fennel stalk carrying fire. A birdcage with its door open.
@@ -52,6 +54,9 @@ When the ground goes out from under us, when a plan collapses or news arrives, t
 
 ### mountain-hand · trickster
 Lightning hit the snag on the ridge one summer. Split it top to bottom, set it smoking, and by the next spring woodpeckers had moved into the crack and the tree was busier than it had ever been alive. Nature doesn't hold a grudge against the bolt. Uranus comes like that. So here's a job: find something in your life that got split open lately and look at it the way a woodpecker would. Write down what's moved in.
+
+### old-man-at-the-lake · synchronicity
+Every spring the ice on the lake goes out all at once. For weeks it groans and darkens and nothing happens, and then one morning there is open water, as if the winter had only been an idea. I have learned not to believe the ice when it looks permanent. The psyche keeps its own spring, and it does not consult us. Uranus is the god of that morning. Something in you may have shifted lately without asking: a door closed, a taste changed, a certainty gone soft. Do not explain it yet. Write down where the ice has gone out.
 
 ## Figure prompts
 

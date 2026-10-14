@@ -3,10 +3,11 @@
 
 import type { Chart, Figure } from '../astro/ephemeris';
 import { DAY_RULERS, RULERS, activeSeasons, moonPhase, natalPoints } from '../astro/sky';
-import { daysBetween, previousDateKey } from '../astro/time';
+import { daysBetween } from '../astro/time';
 import { composeImage } from '../image/grammar';
 import type { Library } from '../library';
 import { LENSES, type Lens, type Tagged } from '../library/parse';
+import { makeDeck } from './deck';
 import { generatedFigurePrompts, generatedWildcards } from './generated';
 import { type Rng, makeRng } from './rng';
 import type { Plate, PlatePrompt, Session } from './types';
@@ -37,6 +38,10 @@ export const DUSK_THRESHOLDS = [
   'What image from today is still hanging around?',
   'Name the texture of today: rough, smooth, knotted, loose?',
   'Which animal was closest to you today, in spirit?',
+  'What sound from today would you keep in a jar?',
+  'Where did the light fall today that you noticed?',
+  'What did your hands do most today?',
+  'Which door did today leave open?',
 ];
 
 export const YESTERDAY_THRESHOLDS = [
@@ -44,6 +49,8 @@ export const YESTERDAY_THRESHOLDS = [
   'Which part of yesterday came with you into the morning?',
   'One word for yesterday, chosen now, in daylight.',
   'What did the night do with yesterday?',
+  'If yesterday left something on the doorstep, what was it?',
+  'Which hour of yesterday would you walk back into, and why that one?',
 ];
 
 const lower = (f: Figure) => f.toLowerCase();
@@ -97,7 +104,8 @@ export function composePlate(input: ComposeInput): Plate {
   const seed = `${dateKey}:${session}:${redraws}`;
   const rng = makeRng(seed);
   const sessionType = session === 'dawn' ? 'dawn' : 'dusk';
-  const sorted = [...history].sort((a, b) => (a.drawnAt < b.drawnAt ? 1 : -1)); // newest first
+  const chrono = [...history].sort((a, b) => (a.drawnAt < b.drawnAt ? -1 : a.drawnAt > b.drawnAt ? 1 : 0)); // oldest first
+  const sameType = (p: Plate) => (p.session === 'dawn' ? 'dawn' : 'dusk') === sessionType;
 
   // --- the sky ---
   const sun = sky.bodies.find((b) => b.figure === 'Sun')!;
@@ -106,69 +114,60 @@ export function composePlate(input: ComposeInput): Plate {
   const seasons = activeSeasons(sky, natal);
 
   // --- figure of the day ---
+  // Dealt from a deck: every figure once a cycle, an active season's mover two or
+  // three times, and nobody back within two Plates of their last turn. The day's
+  // ruler and the Moon's sign decide who tends to come up first.
   const available = sky.bodies.map((b) => b.figure).filter((f) => lib.figures[lower(f)]);
-  const prev1 = previousDateKey(dateKey);
-  const prev2 = previousDateKey(prev1);
-  const figuresOn = (k: string) => new Set(history.filter((p) => p.dateKey === k).map((p) => p.figure));
-  const seasonWeight = new Map<Figure, number>();
-  seasons.slice(0, 2).forEach((s, i) => seasonWeight.set(s.mover, Math.max(seasonWeight.get(s.mover) ?? 0, i === 0 ? 6 : 3)));
+  const seasonCopies = new Map<Figure, number>();
+  seasons.slice(0, 2).forEach((s, i) => seasonCopies.set(s.mover, Math.max(seasonCopies.get(s.mover) ?? 1, i === 0 ? 3 : 2)));
   const moonRulers = RULERS[moon.sign];
-  const lastFigure = sorted[0]?.figure;
-  const figure = rng.fork('figure').weighted(available, (f) => {
-    const id = lower(f);
-    let w = 1 + (seasonWeight.get(f) ?? 0);
+  const figureDeck = makeDeck(available, lower, chrono.map((p) => p.figure), { copies: (f) => seasonCopies.get(f) ?? 1, gap: 2 });
+  const figure = figureDeck.deal(rng.fork('figure'), (f) => {
+    let w = 1;
     if (DAY_RULERS[input.weekday] === f) w += 1.5;
     if (moonRulers.includes(f)) w += 1.5 / moonRulers.length;
-    const threeRunning = figuresOn(prev1).has(id) && figuresOn(prev2).has(id);
-    if (threeRunning && !seasonWeight.has(f)) return 0;
-    if (lastFigure === id && !seasonWeight.has(f)) w *= 0.5;
-    return w * landedFactor(history, (p) => p.figure === id);
+    return w * landedFactor(history, (p) => p.figure === lower(f));
   });
   const fig = lib.figures[lower(figure)];
   const figBody = sky.bodies.find((b) => b.figure === figure)!;
   const season = seasons.find((s) => s.mover === figure);
 
   // --- lens and voice (offline, a voice comes with its reading) ---
+  // Lenses and voices are dealt like the figures, and each figure deals out all
+  // its readings before any comes back. The lens deck says which lens to try for;
+  // when this figure has nothing fresh in it, the reading's own lens wins.
   const pinnedLens = settings.lens !== 'auto' ? settings.lens : undefined;
-  let lens: Lens = pinnedLens ?? rng.fork('lens').weighted(LENSES, (l) => landedFactor(history, (p) => p.lens === l));
-  const lastVoice = sorted[0]?.voice;
+  const lensDeck = makeDeck(LENSES, (l) => l, chrono.map((p) => p.lens), { gap: 1 });
+  let lens: Lens = pinnedLens ?? lensDeck.deal(rng.fork('lens'), (l) => landedFactor(history, (p) => p.lens === l));
+  const voiceDeck = makeDeck(Object.keys(lib.voices), (v) => v, chrono.map((p) => p.voice), { gap: 2 });
   const pinnedVoice = settings.voice !== 'auto' ? fig.readings.filter((r) => r.voice === settings.voice) : [];
-  const lensMatches = fig.readings.filter((r) => r.lens === lens);
-  const readingPool = pinnedVoice.length ? pinnedVoice : lensMatches.length ? lensMatches : fig.readings;
-  const reading = rng.fork('voice').weighted(readingPool, (r) => {
+  const pinnedLensMatches = pinnedLens ? fig.readings.filter((r) => r.lens === pinnedLens) : [];
+  const readingPool = pinnedVoice.length ? pinnedVoice : pinnedLensMatches.length ? pinnedLensMatches : fig.readings;
+  const readingDeck = makeDeck(readingPool, (r) => r.text, chrono.filter((p) => p.figure === fig.id).map((p) => p.reading));
+  const reading = readingDeck.deal(rng.fork('voice'), (r) => {
     let w = (fig.voices[r.voice] ?? 0.5) * landedFactor(history, (p) => p.voice === r.voice);
-    if (r.voice === lastVoice) w *= 0.5;
-    if (pinnedLens && r.lens !== pinnedLens) w *= 0.2;
+    if (r.lens !== lens) w *= pinnedLens ? 0.2 : 0.1;
+    if (!voiceDeck.left(r.voice)) w *= 0.25;
+    if (voiceDeck.recent(r.voice)) w *= 0.1;
     return w;
   });
   if (!pinnedLens || pinnedVoice.length) lens = reading.lens;
 
   // --- prompts ---
+  const frame = (t: string) => (session === 'yesterdays-dusk' ? yesterdayFraming(t) : t);
   const used30 = usedPrompts(history, dateKey, 30);
   const wildEver = usedPrompts(history, dateKey, Infinity, 'wild');
-  const frame = (t: string) => (session === 'yesterdays-dusk' ? yesterdayFraming(t) : t);
 
-  const lastSame = sorted.find((p) => (p.session === 'dawn' ? 'dawn' : 'dusk') === sessionType);
+  // The dawn threshold is always the dream. The others, and the anchor families,
+  // are dealt so each comes round once before any comes round again.
   const thresholdPool = session === 'dawn' ? [DAWN_THRESHOLD] : session === 'dusk' ? DUSK_THRESHOLDS : YESTERDAY_THRESHOLDS;
-  const lastThreshold = lastSame?.prompts.find((p) => p.kind === 'threshold')?.text;
-  const threshold = rng.fork('threshold').pick(thresholdPool.length > 1 ? thresholdPool.filter((t) => t !== lastThreshold) : thresholdPool);
+  const pastThresholds = chrono.flatMap((p) => p.prompts.filter((x) => x.kind === 'threshold').map((x) => x.text));
+  const threshold = makeDeck(thresholdPool, frame, pastThresholds, { gap: 2 }).deal(rng.fork('threshold'));
 
   const families = lib.anchors[sessionType];
-  const lastFamily = sorted
-    .filter((p) => (p.session === 'dawn' ? 'dawn' : 'dusk') === sessionType)
-    .map((p) => p.prompts.find((x) => x.kind === 'anchor')?.family)
-    .find(Boolean);
-  const daysSinceFamily = (id: string) => {
-    const p = sorted.find((h) => h.prompts.some((x) => x.kind === 'anchor' && x.family === id));
-    return p ? daysBetween(p.dateKey, dateKey) : Infinity;
-  };
-  const family = rng.fork('anchor').weighted(families, (f) => {
-    if (f.id === lastFamily && families.length > 1) return 0;
-    const since = daysSinceFamily(f.id);
-    let w = since === Infinity ? 1.5 : Math.min(since, 10) / 7;
-    if (f.kin.includes(fig.id)) w *= 2;
-    return w * landedFactor(history, (p, i) => p.prompts[i]?.family === f.id);
-  });
+  const pastFamilies = chrono.filter(sameType).flatMap((p) => p.prompts.filter((x) => x.kind === 'anchor').map((x) => x.family ?? ''));
+  const family = makeDeck(families, (f) => f.id, pastFamilies, { gap: 2 }).deal(rng.fork('anchor'), (f) =>
+    (f.kin.includes(fig.id) ? 2 : 1) * landedFactor(history, (p, i) => p.prompts[i]?.family === f.id));
   const anchorText =
     pickFresh(rng.fork('anchor-text'), family.recuts[fig.id] ?? [], lens, used30) ??
     pickFresh(rng.fork('anchor-kin'), family.kin.flatMap((k) => family.recuts[k] ?? []), lens, used30) ??
@@ -188,7 +187,7 @@ export function composePlate(input: ComposeInput): Plate {
     rng.fork('wild-repeat').pick(fig.wildcards).text;
 
   // --- fallow Plates: about once every week or two, never two within a week ---
-  const lastFallow = sorted.find((p) => p.fallow);
+  const lastFallow = chrono.filter((p) => p.fallow).at(-1);
   const fallowAllowed = history.length >= 4 && (!lastFallow || daysBetween(lastFallow.dateKey, dateKey) >= 7);
   const fallowRoll = rng.fork('fallow').next();
   const fallow: Plate['fallow'] = fallowAllowed && fallowRoll < 0.1 ? (fallowRoll < 0.04 ? 'copy-image' : 'one-prompt') : false;
@@ -203,10 +202,11 @@ export function composePlate(input: ComposeInput): Plate {
   if (fallow === 'copy-image') prompts = [{ kind: 'figure', text: 'Write nothing today. Copy the image into your notebook, slowly.' }];
 
   // --- the myth thread ---
-  const recentMyths = new Set(history.filter((p) => daysBetween(p.dateKey, dateKey) <= 14).map((p) => p.myth));
+  // Each figure deals out all its retold myths before any comes back. A myth shared
+  // with another figure counts as dealt whichever figure brought it.
   const withRetelling = fig.myths.filter((m) => lib.myths[m.id]);
-  const mythPool = withRetelling.filter((m) => !recentMyths.has(m.id));
-  const myth = (mythPool.length ? rng.fork('myth').pick(mythPool) : withRetelling.length ? rng.fork('myth').pick(withRetelling) : undefined)?.id;
+  const pastMyths = chrono.map((p) => p.myth ?? '');
+  const myth = withRetelling.length ? makeDeck(withRetelling, (m) => m.id, pastMyths, { gap: 1 }).deal(rng.fork('myth')).id : undefined;
 
   // --- the sky line under the figure's name ---
   const signImage = lib.signs[figBody.sign.toLowerCase()]?.image;

@@ -6,7 +6,7 @@ The brief is in `docs/temenos-build-brief.md`, the research behind it in `docs/r
 
 ## Status
 
-M1 is built: the installable, offline Plate with all eleven figures, 308 anchor re-cuts, 30 myths and ten voices. Next is M2 (the voices, through the API).
+M1 is built: the installable, offline Plate with all eleven figures, 308 anchor re-cuts, 52 myths and ten voices. Next is M2 (the voices, through the API).
 
 ## Development
 
