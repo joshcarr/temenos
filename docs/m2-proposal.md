@@ -1,6 +1,6 @@
 # M2 proposal: the voices
 
-For review before any function code. Once agreed, each decision moves into `DECISIONS.md`.
+Approved 10 November 2026. The short versions are in `DECISIONS.md` (M2-1 to M2-10).
 
 ## What 19 days taught us
 
@@ -135,8 +135,8 @@ Proposed default if you'd rather skip the audition: Sonnet 5.5, as the brief say
 
 **Done when** Plates arrive in distinct voices through each lens, are usually ready before you tap, tie back to their myth, and still work in airplane mode.
 
-## Questions for you
+## Answers
 
-1. Is the six-model, two-round audition the right size, or would you rather read fewer?
-2. What monthly spend cap should the key have? I'd say $10.
-3. Should eight myths per figure be the target, or would you rather it grew more slowly, a few at a time as you notice gaps?
+1. The six-model, two-round audition: yes.
+2. Monthly spend cap on the key: $10.
+3. Myths per figure: eight.

@@ -140,3 +140,53 @@ Dawn is before 2pm and Dusk after 5pm, as the brief says. Between 2 and 5pm the 
 **Why.** The decks are rebuilt from your Plate history each time, so nothing new is stored, and your past Plates count from the first draw. Seasons now give their mover extra cards (three for the main season, two for the next) instead of a weight that bypassed every repeat rule. The season figure leads about one Plate in five, spaced out, instead of one in four in clumps. The day's ruler, the Moon's sign, voice affinity and your "did it land?" marks still apply, but now they decide what tends to come up first in a cycle, not how often. Rejected: longer no-repeat windows on the old rolls. Those rules quietly fall back to a repeat once the pool runs dry, which is what the myth thread was already doing.
 
 The writing that goes with it: six new readings, one for each figure-and-lens pair that had only one. They're in voices that hadn't yet spoken for that figure: the Tavern Mystic on the Moon, the Fairy-Tale Reader on Neptune and Saturn, the Mythographer on Pluto, the Pond Walker on the Sun, and the Old Man at the Lake on Uranus. There are also 22 new myth retellings, so every figure has five. Fourteen were already listed on the figures without a retelling. Eight are new: Philoctetes (Chiron), Stone Soup (Jupiter), Mulan (Mars), Nasreddin's coat (Mercury), the drowned city of Ys (Neptune), Saranyu and the shadow (Sun), the Golem of Prague (Uranus) and the Weaver and the Cowherd (Venus). Dusk has four new thresholds and Yesterday's Dusk two.
+
+---
+
+## M2 decisions
+
+Approved 10 Nov 2026. The full rationale for each is in `docs/m2-proposal.md`; these are the short versions.
+
+## M2-1. Back up first
+
+**Problem.** Every Plate and landed mark lived only in IndexedDB on the phone, and iOS can clear a home-screen app's storage.
+
+**Effect on you.** Settings → Your Plates → Back up opens the share sheet with one JSON file, to save in Files or AirDrop to yourself. Settings shows when you last saved, and that's the only nudge. Restore adds Plates from a backup without losing anything on the phone. If the phone was wiped, the first screen offers to restore before asking for birth details.
+
+**Why.** It protects nineteen days of marks before M2 changes the Plate, and it gives us your marks to tune against. M4's Obsidian export builds on the same file. Rejected: waiting for M4.
+
+## M2-2. One passphrase per person
+
+Rejected Cloudflare Access: iOS home-screen apps keep their own cookies, so an expired login would silently turn every Plate offline. Each person gets their own passphrase, a daily cap of ten calls, and a spend log entry by name, so a friend can be added or removed without touching anyone else. The API key has a $10 monthly cap as the backstop.
+
+## M2-3. Voicing starts on opening
+
+Once "did it land?" is answered or skipped, the app composes the Plate it would draw and sends it to be voiced. Before 2pm it voices both Yesterday's Dusk and Dawn. If the text isn't ready when you tap, the line keeps walking; after 8 seconds the offline text appears.
+
+## M2-4. What the model writes
+
+The thresholds stay as written. The anchor is lightly voiced and stays recognisable. The figure prompt and wild card are free. The reading is 80 to 150 words. Yesterday's Dusk is reframed by the model. A fallow Plate voices only its reading.
+
+## M2-5. The myth stays dealt
+
+The model gets the full retelling and writes toward it. The reading names it, and the figure prompt or wild card borrows an image from it. The library grows to eight myths per figure, tagged by theme so the deck can prefer a myth that fits the anchor.
+
+## M2-6. The model hears what lands
+
+A line or two computed from your marks, sent once enough Plates have been marked.
+
+## M2-7. Light continuity
+
+The model sees the last three Plates and any running season, and may make one callback when it fits. It never claims to know what you wrote, because it can't.
+
+## M2-8. The model's words are saved
+
+A model writes differently every time, so a voiced Plate keeps the exact text and the model that wrote it. Nothing on screen marks a Plate as voiced.
+
+## M2-9. Guardrails
+
+Schema-checked JSON, word counts checked on the phone, wild cards checked against every one you've had, the brief's rules in the system prompt word for word, and the offline Plate whenever anything fails.
+
+## M2-10. Choosing the model by reading, not by leaderboard
+
+At two or three calls a day every candidate costs between cents and a few dollars a month, so the choice is about how well each one writes the voices. Round one: 8 Plates voiced by Sonnet 5.5, Opus 5.5, OpenAI's and Google's current flagships, GLM-5.2 and Kimi K2.6, all through OpenRouter, read blind; you keep three. Round two: those three voice 30 Plates beside the hand-written readings. Haiku was dropped because its only advantage is price.
