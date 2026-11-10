@@ -112,7 +112,7 @@ So the question is which model writes the voices best, and that should be decide
 
 **OpenRouter** is a single API and key that reaches hundreds of models from many providers, billed at each provider's list price plus a fee of about 5.5% when you buy credits. It's the easiest way to try open models. The costs are a second company handling your Plate context, privacy terms that vary by underlying provider, and an extra hop.
 
-**The audition.** One script composes 30 Plates (every voice, every lens, a few fallow and Yesterday's Dusk) and voices each with Sonnet 5.5, Haiku 5.5, Opus 5.5 and one or two open models through OpenRouter. You read them side by side with the model names hidden, alongside the hand-written reading for the same figure. You pick a model, and we also see whether voiced text beats the library at all. If nothing does, M2 ships as a smaller change.
+**The audition.** It runs in two rounds so the reading stays manageable. In round one, a script composes 8 Plates (a spread of voices and lenses, one fallow, one Yesterday's Dusk) and voices each with seven models: Sonnet 5.5, Haiku 5.5, Opus 5.5, OpenAI's and Google's current flagships, GLM-5.2 and Kimi K2.6, all through OpenRouter so one key reaches them. You read them with the model names hidden and keep three. In round two, those three voice 30 Plates, set beside the hand-written reading for the same figure. You pick a model, and we also see whether voiced text beats the library at all. If nothing does, M2 ships as a smaller change. Both rounds together cost a few dollars.
 
 Proposed default if you'd rather skip the audition: Sonnet 5.5, as the brief says. The function sits behind a thin interface, so changing models later means changing one file.
 
@@ -129,6 +129,6 @@ Proposed default if you'd rather skip the audition: Sonnet 5.5, as the brief say
 
 ## Questions for you
 
-1. Which models go in the audition? I'd use the four above plus Kimi K2.6.
+1. Is the seven-model, two-round audition the right size, or would you rather read fewer?
 2. What monthly spend cap should the key have? I'd say $10.
 3. Should eight myths per figure be the target, or would you rather it grew more slowly, a few at a time as you notice gaps?
