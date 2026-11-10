@@ -102,7 +102,6 @@ At two or three calls a day, cost hardly matters. Each call sends about 10,000 t
 | Model | Rough cost per call | Per month |
 |---|---|---|
 | Claude Sonnet 5.5 (the brief's pick) | about 2.5¢ | about $2 |
-| Claude Haiku 5.5 | about 0.1¢ | about 10¢ |
 | Claude Opus 5.5 | about 5¢ | about $4 |
 | GLM-5.2 via OpenRouter (strongest open-weight creative writer I found) | about 0.6¢ | about 50¢ |
 
@@ -112,7 +111,7 @@ So the question is which model writes the voices best, and that should be decide
 
 **OpenRouter** is a single API and key that reaches hundreds of models from many providers, billed at each provider's list price plus a fee of about 5.5% when you buy credits. It's the easiest way to try open models. The costs are a second company handling your Plate context, privacy terms that vary by underlying provider, and an extra hop.
 
-**The audition.** It runs in two rounds so the reading stays manageable. In round one, a script composes 8 Plates (a spread of voices and lenses, one fallow, one Yesterday's Dusk) and voices each with seven models: Sonnet 5.5, Haiku 5.5, Opus 5.5, OpenAI's and Google's current flagships, GLM-5.2 and Kimi K2.6, all through OpenRouter so one key reaches them. You read them with the model names hidden and keep three. In round two, those three voice 30 Plates, set beside the hand-written reading for the same figure. You pick a model, and we also see whether voiced text beats the library at all. If nothing does, M2 ships as a smaller change. Both rounds together cost a few dollars.
+**The audition.** It runs in two rounds so the reading stays manageable. In round one, a script composes 8 Plates (a spread of voices and lenses, one fallow, one Yesterday's Dusk) and voices each with six models: Sonnet 5.5, Opus 5.5, OpenAI's and Google's current flagships, GLM-5.2 and Kimi K2.6, all through OpenRouter so one key reaches them. You read them with the model names hidden and keep three. In round two, those three voice 30 Plates, set beside the hand-written reading for the same figure. You pick a model, and we also see whether voiced text beats the library at all. If nothing does, M2 ships as a smaller change. Both rounds together cost a few dollars.
 
 Proposed default if you'd rather skip the audition: Sonnet 5.5, as the brief says. The function sits behind a thin interface, so changing models later means changing one file.
 
@@ -129,6 +128,6 @@ Proposed default if you'd rather skip the audition: Sonnet 5.5, as the brief say
 
 ## Questions for you
 
-1. Is the seven-model, two-round audition the right size, or would you rather read fewer?
+1. Is the six-model, two-round audition the right size, or would you rather read fewer?
 2. What monthly spend cap should the key have? I'd say $10.
 3. Should eight myths per figure be the target, or would you rather it grew more slowly, a few at a time as you notice gaps?
