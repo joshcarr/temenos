@@ -38,6 +38,15 @@ export const allPlates = async () => (await db()).getAll('plates') as Promise<Pl
 export const getPlate = async (id: string) => (await db()).get('plates', id) as Promise<Plate | undefined>;
 export const savePlate = async (p: Plate) => (await db()).put('plates', JSON.parse(JSON.stringify(p)));
 
+export async function savePlates(ps: Plate[]) {
+  const tx = (await db()).transaction('plates', 'readwrite');
+  await Promise.all([...ps.map((p) => tx.store.put(plain(p))), tx.done]);
+}
+
+/** When the last backup was saved, as an ISO string. */
+export const getLastBackup = async () => (await db()).get('kv', 'lastBackup') as Promise<string | undefined>;
+export const saveLastBackup = async (at: string) => (await db()).put('kv', at, 'lastBackup');
+
 /** Ask the browser not to evict our data (matters on iOS). */
 export async function persist() {
   try {

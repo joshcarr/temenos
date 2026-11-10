@@ -2,7 +2,22 @@
   import type { Place, Profile } from '../store/db';
   import CityPicker from './CityPicker.svelte';
 
-  let { existing, onDone, onCancel }: { existing?: Profile; onDone: (p: Profile) => void; onCancel?: () => void } = $props();
+  let { existing, onDone, onCancel, onRestore }: {
+    existing?: Profile; onDone: (p: Profile) => void; onCancel?: () => void; onRestore?: (file: File) => Promise<string>;
+  } = $props();
+
+  let restoreNote = $state('');
+  async function picked(e: Event) {
+    const input = e.currentTarget as HTMLInputElement;
+    const file = input.files?.[0];
+    input.value = '';
+    if (!file || !onRestore) return;
+    try {
+      restoreNote = await onRestore(file);
+    } catch (err) {
+      restoreNote = (err as Error).message;
+    }
+  }
 
   let date = $state(existing?.birth.date ?? '');
   let time = $state(existing?.birth.time ?? '');
@@ -38,6 +53,10 @@
     {#if onCancel}<button class="pill" onclick={onCancel}>Cancel</button>{/if}
     <button class="pill solid" disabled={!ready} onclick={submit}>{existing ? 'Save' : 'Begin'}</button>
   </div>
+  {#if !existing && onRestore}
+    <label class="restore">Been here before? <u>Restore from a backup</u><input type="file" accept=".json,application/json" onchange={picked} /></label>
+    {#if restoreNote}<p class="note" role="status">{restoreNote}</p>{/if}
+  {/if}
 </main>
 
 <style>
@@ -47,5 +66,8 @@
   .label { display: block; margin-bottom: 8px; }
   small { display: block; margin-top: 6px; font-size: 13px; color: var(--faint); }
   .privacy { margin-top: 28px; font-size: 13px; color: var(--dim); }
+  .restore { display: block; margin-top: 36px; font-size: 14px; color: var(--dim); cursor: pointer; }
+  .restore input { display: none; }
+  .note { margin-top: 8px; font-size: 14px; color: var(--accent); }
   .actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px; }
 </style>
