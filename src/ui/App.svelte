@@ -6,7 +6,11 @@
   import { library } from '../library/load';
   import { composePlate, defaultSession, type PlateSettings } from '../plate/compose';
   import type { Plate, Session } from '../plate/types';
-  import { DEFAULT_SETTINGS, type Profile, allPlates, getProfile, getSettings, persist, saveProfile, savePlate, saveSettings } from '../store/db';
+  import { backupFileName, makeBackup, parseBackup, platesToRestore } from '../store/backup';
+  import {
+    DEFAULT_SETTINGS, type Profile, allPlates, getLastBackup, getProfile, getSettings, persist,
+    saveLastBackup, savePlate, savePlates, saveProfile, saveSettings,
+  } from '../store/db';
   import Landed from './Landed.svelte';
   import MoonGlyph from './MoonGlyph.svelte';
   import MythView from './MythView.svelte';
@@ -25,6 +29,7 @@
   let animateId = $state<string | null>(null);
   let now = $state(new Date());
   let natal: Chart | undefined;
+  let lastBackup = $state<string | undefined>();
   let skyNow = $state<{ phase: string; sign: string; illumination: number; waxing: boolean; season?: string } | undefined>();
 
   const zone = $derived(profile?.home.zone ?? Intl.DateTimeFormat().resolvedOptions().timeZone);
@@ -68,7 +73,7 @@
   }
 
   onMount(async () => {
-    [profile, settings, plates] = await Promise.all([getProfile(), getSettings(), allPlates()]);
+    [profile, settings, plates, lastBackup] = await Promise.all([getProfile(), getSettings(), allPlates(), getLastBackup()]);
     if (profile) {
       natal = await castNatal(profile);
       chooseSession();
@@ -127,6 +132,42 @@
     view = 'home';
   }
 
+  // Nothing is awaited before share(): iOS only opens the share sheet straight from the tap.
+  async function backUp() {
+    const b = makeBackup($state.snapshot({ profile, settings, plates }) as Parameters<typeof makeBackup>[0]);
+    const file = new File([JSON.stringify(b, null, 1)], backupFileName(b), { type: 'application/json' });
+    if (navigator.canShare?.({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file] });
+      } catch (e) {
+        if ((e as Error).name === 'AbortError') return 'Not saved.';
+        throw e;
+      }
+    } else {
+      const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(file), download: file.name });
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 10_000);
+    }
+    await saveLastBackup(b.exportedAt);
+    lastBackup = b.exportedAt;
+    return `Saved ${b.plates.length} Plate${b.plates.length === 1 ? '' : 's'}.`;
+  }
+
+  async function restore(file: File) {
+    const b = parseBackup(await file.text());
+    if (!profile && b.profile) {
+      if (b.settings) {
+        settings = { ...DEFAULT_SETTINGS, ...b.settings };
+        await saveSettings(settings);
+      }
+      await finishOnboarding(b.profile);
+    }
+    const added = platesToRestore($state.snapshot(plates) as Plate[], b.plates);
+    await savePlates(added);
+    plates = await allPlates();
+    return added.length ? `Restored ${added.length} Plate${added.length === 1 ? '' : 's'}.` : 'Everything in that backup is already here.';
+  }
+
   const sessionLabel: Record<Session, string> = { dawn: 'Dawn', dusk: 'Dusk', 'yesterdays-dusk': "Yesterday's Dusk" };
   const fmtDate = (k: string) =>
     new Date(`${k}T12:00:00Z`).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', timeZone: 'UTC' });
@@ -135,11 +176,15 @@
 {#if !loaded}
   <main></main>
 {:else if view === 'onboarding'}
-  <Onboarding existing={profile} onDone={finishOnboarding} onCancel={profile ? () => (view = 'settings') : undefined} />
+  <Onboarding existing={profile} onDone={finishOnboarding} onCancel={profile ? () => (view = 'settings') : undefined} onRestore={restore} />
 {:else if view === 'settings'}
   <Settings
     {settings}
     voices={library.voices}
+    plateCount={plates.length}
+    {lastBackup}
+    onBackup={backUp}
+    onRestore={restore}
     onChange={async (s) => { settings = s; await saveSettings(s); }}
     onEditProfile={() => (view = 'onboarding')}
     onBack={() => (view = 'home')}
