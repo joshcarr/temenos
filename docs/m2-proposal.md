@@ -20,13 +20,22 @@ One thing to watch: a model playing the Tavern Mystic or the Howler will lean ha
 
 **Why.** It's a small job, and the M4 Obsidian export can build on it later. Rejected: waiting for M4. The data matters more now than the export format does.
 
-### M2-2. A passphrase, not Cloudflare Access
+### M2-2. One passphrase per person, not Cloudflare Access
 
-**Problem.** `/api/plate` spends money on an API key, so a stranger who found the URL shouldn't be able to use it.
+**Problem.** `/api/plate` spends money on your API key, so a stranger who found the URL shouldn't be able to use it. And it won't only be you: a trusted friend already has the app, and others have asked. With one shared passphrase you couldn't see who is calling, couldn't cut off one person, and if it leaked, you'd have to re-send a new one to everyone.
 
-**Effect on you.** You type the passphrase once in Settings and never see it again.
+**Effect on you.** You type your passphrase once in Settings and never see it again. To share voiced Plates with someone, you add their name and a passphrase to the list and send them the passphrase. A friend without one still gets offline Plates, which work well. You can see what each person's calls cost, and remove anyone by deleting their line.
 
-**Why.** On iOS an app on the home screen keeps its own cookies, separate from Safari. Access's login redirect works badly inside it, and when the login expires, calls start getting a login page back. The app would then quietly fall back to offline Plates, possibly for days before you noticed. With a passphrase, the function compares a hash against a Cloudflare secret, and a wrong passphrase gets a 401 that Settings can show. A monthly spend cap on the API key limits the cost if the passphrase leaks.
+**How.** The function keeps a list of names with hashed passphrases (a Cloudflare secret, or KV if the list grows). Each call is logged with the person's name and its cost, never its content. Each person can make ten calls a day, which covers a daily practice with redraws and stops a leaked passphrase from running up the bill. The monthly spend cap on the key stays as the backstop. A wrong or revoked passphrase gets a 401 that Settings can show.
+
+**Why not Cloudflare Access.** On iOS an app on the home screen keeps its own cookies, separate from Safari. Access's login redirect works badly inside it, and when the login expires, calls start getting a login page back. The app would then quietly fall back to offline Plates, possibly for days before anyone noticed, and that would happen to your friends too. Rejected as well: a single shared passphrase, which costs only an hour less to build and can't do any of the above.
+
+**What changes when other people use it.**
+
+- *Their Plates pass through your accounts.* Their birth data stays on their phone, as yours does, but each voiced Plate's context (chart positions, selections, recent prompts) goes through your Cloudflare function and your API key. Nothing is stored. Tell them that in a sentence when you share it.
+- *The licence.* Swiss Ephemeris is AGPL (M0-1), so anyone using the app is entitled to its source. The repo is public, which covers that. If it ever goes private, people using the app need the source some other way.
+- *The writing is tuned to you.* Nothing in the code or library uses your name, and the system prompt takes the name from each person's own profile. But affinity weights, and anything we tune from your landed marks, follow your practice. Each friend's marks only adjust their own phone.
+- *Where this stops.* This is meant for a handful of trusted friends. More than that is a different product, with accounts, a privacy policy and either a real budget or each person bringing their own key. That belongs in the parking lot.
 
 ### M2-3. Voicing starts when you open the app, not when you tap draw
 
@@ -119,7 +128,7 @@ Proposed default if you'd rather skip the audition: Sonnet 5.5, as the brief say
 
 1. Backup button (M2-1).
 2. Restraint lines for the louder voices, the myth tags, and the audition script. You read the results.
-3. The Pages Function: passphrase, schema, caching, a spend log.
+3. The Pages Function: per-person passphrases and daily caps, schema, caching, a spend log per person.
 4. Voicing on open, the walking-line loading state, the fallback and saved words.
 5. Landed summary and continuity.
 6. Myth library to eight per figure, in parallel with steps 3 to 5.
